@@ -67,7 +67,7 @@ export function Header() {
           </Link>
 
           <div className="hidden lg:flex items-center gap-4 xl:gap-5 text-[12px] xl:text-[13px] font-medium whitespace-nowrap">
-            {NAV.map((n) => (
+            {TOP_NAV.map((n) => (
               <Link
                 key={n.label}
                 to={n.to}
