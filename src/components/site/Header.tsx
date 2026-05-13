@@ -2,13 +2,13 @@ import { Link } from "@tanstack/react-router";
 import { Search, ShoppingBag, Heart, Menu } from "lucide-react";
 
 const NAV = [
+  { label: "Weddings", to: "/" },
   { label: "Occasions", to: "/" },
   { label: "Recipients", to: "/" },
-  { label: "Weddings", to: "/" },
-  { label: "Birthdays", to: "/" },
-  { label: "Anniversary", to: "/" },
-  { label: "Engagement", to: "/" },
-  { label: "New In", to: "/" },
+  { label: "Glassware", to: "/" },
+  { label: "Mugs", to: "/" },
+  { label: "Photo Gifts", to: "/" },
+  { label: "Diamanté", to: "/" },
   { label: "Sale", to: "/" },
 ];
 
