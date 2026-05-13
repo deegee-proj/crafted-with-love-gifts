@@ -7,7 +7,7 @@ export function Hero() {
       <div className="max-w-[1400px] mx-auto px-6 pt-10 lg:pt-16 pb-20 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
         <div className="lg:col-span-6 reveal">
           <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 text-primary px-4 py-1.5 text-xs font-semibold uppercase tracking-widest">
-            <Sparkles className="size-3.5" /> Hand-finished in the UK since 2012
+            <Sparkles className="size-3.5" /> Hand-finished in the UK since 2021
           </div>
           <h1 className="mt-6 font-display text-5xl md:text-6xl lg:text-7xl leading-[0.95] font-semibold tracking-tight">
             Gifts they'll <em className="text-primary not-italic">never</em><br />
