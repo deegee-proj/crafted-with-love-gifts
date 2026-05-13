@@ -32,7 +32,7 @@ export function Header() {
             <span className="font-display text-2xl font-semibold tracking-tight leading-none">
               Maker<span className="text-primary">·</span>Mark
             </span>
-            <span className="mt-1 italic font-serif text-[11px] sm:text-xs tracking-[0.22em] text-primary/80 lowercase">
+            <span className="mt-1 text-primary text-base sm:text-lg tracking-[0.3em] lowercase" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400 }}>
               personalised gifts
             </span>
           </Link>
