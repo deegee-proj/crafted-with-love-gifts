@@ -70,7 +70,7 @@ export function Hero() {
             <div key={dup} className="flex shrink-0 gap-12 pr-12">
               {[
                 "★ Feefo Platinum Service 2025",
-                "Free UK delivery over £40",
+                "Free UK delivery over £50",
                 "Live preview on every product",
                 "Trusted by thousands of UK gift-givers",
                 "Engraved & dispatched within 24h",

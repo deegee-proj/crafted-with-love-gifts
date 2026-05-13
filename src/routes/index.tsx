@@ -11,7 +11,7 @@ import { Footer } from "@/components/site/Footer";
 
 const TITLE = "Maker·Mark — Personalised Gifts, Engraved in the UK";
 const DESCRIPTION =
-  "Premium personalised gifts hand-finished in our London studio. Engraved glassware, custom mugs, photo frames & keepsakes with live preview and free UK delivery over £40.";
+  "Premium personalised gifts hand-finished in our London studio. Engraved glassware, custom mugs, photo frames & keepsakes with live preview and free UK delivery over £50.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
