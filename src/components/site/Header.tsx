@@ -10,10 +10,16 @@ const NAV = [
   { label: "Home & Garden", to: "/" },
   { label: "Food & Drinks", to: "/" },
   { label: "Fashion & Accs.", to: "/" },
+  { label: "Memorial Gifts", to: "/" },
+  { label: "Pets & Pet Lovers", to: "/" },
   { label: "Corporate Gifts", to: "/" },
   { label: "By Recipient", to: "/" },
   { label: "Occasions", to: "/" },
 ];
+
+const TOP_NAV = NAV.filter(
+  (n) => n.label !== "Food & Drinks" && n.label !== "Fashion & Accs."
+);
 
 export function Header() {
   return (
