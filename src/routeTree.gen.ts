@@ -9,12 +9,102 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WeddingsRouteImport } from './routes/weddings'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as PhotoGiftsRouteImport } from './routes/photo-gifts'
+import { Route as PetsRouteImport } from './routes/pets'
+import { Route as PersonalisedMugsRouteImport } from './routes/personalised-mugs'
+import { Route as PersonalisedGiftsRouteImport } from './routes/personalised-gifts'
+import { Route as OccasionsRouteImport } from './routes/occasions'
+import { Route as MemorialGiftsRouteImport } from './routes/memorial-gifts'
+import { Route as HomeGardenRouteImport } from './routes/home-garden'
+import { Route as FoodDrinksRouteImport } from './routes/food-drinks'
+import { Route as FathersDayRouteImport } from './routes/fathers-day'
+import { Route as FashionAccessoriesRouteImport } from './routes/fashion-accessories'
+import { Route as CorporateGiftsRouteImport } from './routes/corporate-gifts'
+import { Route as ByRecipientRouteImport } from './routes/by-recipient'
+import { Route as BirthdaysRouteImport } from './routes/birthdays'
+import { Route as AnniversariesRouteImport } from './routes/anniversaries'
 import { Route as IndexRouteImport } from './routes/index'
 
+const WeddingsRoute = WeddingsRouteImport.update({
+  id: '/weddings',
+  path: '/weddings',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PhotoGiftsRoute = PhotoGiftsRouteImport.update({
+  id: '/photo-gifts',
+  path: '/photo-gifts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PetsRoute = PetsRouteImport.update({
+  id: '/pets',
+  path: '/pets',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PersonalisedMugsRoute = PersonalisedMugsRouteImport.update({
+  id: '/personalised-mugs',
+  path: '/personalised-mugs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PersonalisedGiftsRoute = PersonalisedGiftsRouteImport.update({
+  id: '/personalised-gifts',
+  path: '/personalised-gifts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OccasionsRoute = OccasionsRouteImport.update({
+  id: '/occasions',
+  path: '/occasions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MemorialGiftsRoute = MemorialGiftsRouteImport.update({
+  id: '/memorial-gifts',
+  path: '/memorial-gifts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HomeGardenRoute = HomeGardenRouteImport.update({
+  id: '/home-garden',
+  path: '/home-garden',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FoodDrinksRoute = FoodDrinksRouteImport.update({
+  id: '/food-drinks',
+  path: '/food-drinks',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FathersDayRoute = FathersDayRouteImport.update({
+  id: '/fathers-day',
+  path: '/fathers-day',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FashionAccessoriesRoute = FashionAccessoriesRouteImport.update({
+  id: '/fashion-accessories',
+  path: '/fashion-accessories',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CorporateGiftsRoute = CorporateGiftsRouteImport.update({
+  id: '/corporate-gifts',
+  path: '/corporate-gifts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ByRecipientRoute = ByRecipientRouteImport.update({
+  id: '/by-recipient',
+  path: '/by-recipient',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BirthdaysRoute = BirthdaysRouteImport.update({
+  id: '/birthdays',
+  path: '/birthdays',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AnniversariesRoute = AnniversariesRouteImport.update({
+  id: '/anniversaries',
+  path: '/anniversaries',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,37 +115,254 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/anniversaries': typeof AnniversariesRoute
+  '/birthdays': typeof BirthdaysRoute
+  '/by-recipient': typeof ByRecipientRoute
+  '/corporate-gifts': typeof CorporateGiftsRoute
+  '/fashion-accessories': typeof FashionAccessoriesRoute
+  '/fathers-day': typeof FathersDayRoute
+  '/food-drinks': typeof FoodDrinksRoute
+  '/home-garden': typeof HomeGardenRoute
+  '/memorial-gifts': typeof MemorialGiftsRoute
+  '/occasions': typeof OccasionsRoute
+  '/personalised-gifts': typeof PersonalisedGiftsRoute
+  '/personalised-mugs': typeof PersonalisedMugsRoute
+  '/pets': typeof PetsRoute
+  '/photo-gifts': typeof PhotoGiftsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/weddings': typeof WeddingsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/anniversaries': typeof AnniversariesRoute
+  '/birthdays': typeof BirthdaysRoute
+  '/by-recipient': typeof ByRecipientRoute
+  '/corporate-gifts': typeof CorporateGiftsRoute
+  '/fashion-accessories': typeof FashionAccessoriesRoute
+  '/fathers-day': typeof FathersDayRoute
+  '/food-drinks': typeof FoodDrinksRoute
+  '/home-garden': typeof HomeGardenRoute
+  '/memorial-gifts': typeof MemorialGiftsRoute
+  '/occasions': typeof OccasionsRoute
+  '/personalised-gifts': typeof PersonalisedGiftsRoute
+  '/personalised-mugs': typeof PersonalisedMugsRoute
+  '/pets': typeof PetsRoute
+  '/photo-gifts': typeof PhotoGiftsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/weddings': typeof WeddingsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/anniversaries': typeof AnniversariesRoute
+  '/birthdays': typeof BirthdaysRoute
+  '/by-recipient': typeof ByRecipientRoute
+  '/corporate-gifts': typeof CorporateGiftsRoute
+  '/fashion-accessories': typeof FashionAccessoriesRoute
+  '/fathers-day': typeof FathersDayRoute
+  '/food-drinks': typeof FoodDrinksRoute
+  '/home-garden': typeof HomeGardenRoute
+  '/memorial-gifts': typeof MemorialGiftsRoute
+  '/occasions': typeof OccasionsRoute
+  '/personalised-gifts': typeof PersonalisedGiftsRoute
+  '/personalised-mugs': typeof PersonalisedMugsRoute
+  '/pets': typeof PetsRoute
+  '/photo-gifts': typeof PhotoGiftsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/weddings': typeof WeddingsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/sitemap.xml'
+  fullPaths:
+    | '/'
+    | '/anniversaries'
+    | '/birthdays'
+    | '/by-recipient'
+    | '/corporate-gifts'
+    | '/fashion-accessories'
+    | '/fathers-day'
+    | '/food-drinks'
+    | '/home-garden'
+    | '/memorial-gifts'
+    | '/occasions'
+    | '/personalised-gifts'
+    | '/personalised-mugs'
+    | '/pets'
+    | '/photo-gifts'
+    | '/sitemap.xml'
+    | '/weddings'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/sitemap.xml'
-  id: '__root__' | '/' | '/sitemap.xml'
+  to:
+    | '/'
+    | '/anniversaries'
+    | '/birthdays'
+    | '/by-recipient'
+    | '/corporate-gifts'
+    | '/fashion-accessories'
+    | '/fathers-day'
+    | '/food-drinks'
+    | '/home-garden'
+    | '/memorial-gifts'
+    | '/occasions'
+    | '/personalised-gifts'
+    | '/personalised-mugs'
+    | '/pets'
+    | '/photo-gifts'
+    | '/sitemap.xml'
+    | '/weddings'
+  id:
+    | '__root__'
+    | '/'
+    | '/anniversaries'
+    | '/birthdays'
+    | '/by-recipient'
+    | '/corporate-gifts'
+    | '/fashion-accessories'
+    | '/fathers-day'
+    | '/food-drinks'
+    | '/home-garden'
+    | '/memorial-gifts'
+    | '/occasions'
+    | '/personalised-gifts'
+    | '/personalised-mugs'
+    | '/pets'
+    | '/photo-gifts'
+    | '/sitemap.xml'
+    | '/weddings'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AnniversariesRoute: typeof AnniversariesRoute
+  BirthdaysRoute: typeof BirthdaysRoute
+  ByRecipientRoute: typeof ByRecipientRoute
+  CorporateGiftsRoute: typeof CorporateGiftsRoute
+  FashionAccessoriesRoute: typeof FashionAccessoriesRoute
+  FathersDayRoute: typeof FathersDayRoute
+  FoodDrinksRoute: typeof FoodDrinksRoute
+  HomeGardenRoute: typeof HomeGardenRoute
+  MemorialGiftsRoute: typeof MemorialGiftsRoute
+  OccasionsRoute: typeof OccasionsRoute
+  PersonalisedGiftsRoute: typeof PersonalisedGiftsRoute
+  PersonalisedMugsRoute: typeof PersonalisedMugsRoute
+  PetsRoute: typeof PetsRoute
+  PhotoGiftsRoute: typeof PhotoGiftsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  WeddingsRoute: typeof WeddingsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/weddings': {
+      id: '/weddings'
+      path: '/weddings'
+      fullPath: '/weddings'
+      preLoaderRoute: typeof WeddingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/photo-gifts': {
+      id: '/photo-gifts'
+      path: '/photo-gifts'
+      fullPath: '/photo-gifts'
+      preLoaderRoute: typeof PhotoGiftsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pets': {
+      id: '/pets'
+      path: '/pets'
+      fullPath: '/pets'
+      preLoaderRoute: typeof PetsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/personalised-mugs': {
+      id: '/personalised-mugs'
+      path: '/personalised-mugs'
+      fullPath: '/personalised-mugs'
+      preLoaderRoute: typeof PersonalisedMugsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/personalised-gifts': {
+      id: '/personalised-gifts'
+      path: '/personalised-gifts'
+      fullPath: '/personalised-gifts'
+      preLoaderRoute: typeof PersonalisedGiftsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/occasions': {
+      id: '/occasions'
+      path: '/occasions'
+      fullPath: '/occasions'
+      preLoaderRoute: typeof OccasionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/memorial-gifts': {
+      id: '/memorial-gifts'
+      path: '/memorial-gifts'
+      fullPath: '/memorial-gifts'
+      preLoaderRoute: typeof MemorialGiftsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/home-garden': {
+      id: '/home-garden'
+      path: '/home-garden'
+      fullPath: '/home-garden'
+      preLoaderRoute: typeof HomeGardenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/food-drinks': {
+      id: '/food-drinks'
+      path: '/food-drinks'
+      fullPath: '/food-drinks'
+      preLoaderRoute: typeof FoodDrinksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fathers-day': {
+      id: '/fathers-day'
+      path: '/fathers-day'
+      fullPath: '/fathers-day'
+      preLoaderRoute: typeof FathersDayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fashion-accessories': {
+      id: '/fashion-accessories'
+      path: '/fashion-accessories'
+      fullPath: '/fashion-accessories'
+      preLoaderRoute: typeof FashionAccessoriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/corporate-gifts': {
+      id: '/corporate-gifts'
+      path: '/corporate-gifts'
+      fullPath: '/corporate-gifts'
+      preLoaderRoute: typeof CorporateGiftsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/by-recipient': {
+      id: '/by-recipient'
+      path: '/by-recipient'
+      fullPath: '/by-recipient'
+      preLoaderRoute: typeof ByRecipientRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/birthdays': {
+      id: '/birthdays'
+      path: '/birthdays'
+      fullPath: '/birthdays'
+      preLoaderRoute: typeof BirthdaysRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/anniversaries': {
+      id: '/anniversaries'
+      path: '/anniversaries'
+      fullPath: '/anniversaries'
+      preLoaderRoute: typeof AnniversariesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,8 +377,33 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AnniversariesRoute: AnniversariesRoute,
+  BirthdaysRoute: BirthdaysRoute,
+  ByRecipientRoute: ByRecipientRoute,
+  CorporateGiftsRoute: CorporateGiftsRoute,
+  FashionAccessoriesRoute: FashionAccessoriesRoute,
+  FathersDayRoute: FathersDayRoute,
+  FoodDrinksRoute: FoodDrinksRoute,
+  HomeGardenRoute: HomeGardenRoute,
+  MemorialGiftsRoute: MemorialGiftsRoute,
+  OccasionsRoute: OccasionsRoute,
+  PersonalisedGiftsRoute: PersonalisedGiftsRoute,
+  PersonalisedMugsRoute: PersonalisedMugsRoute,
+  PetsRoute: PetsRoute,
+  PhotoGiftsRoute: PhotoGiftsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  WeddingsRoute: WeddingsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
