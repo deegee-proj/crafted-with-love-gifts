@@ -2,14 +2,16 @@ import { Link } from "@tanstack/react-router";
 import { Search, ShoppingBag, Heart, Menu } from "lucide-react";
 
 const NAV = [
+  { label: "Father's Day", to: "/" },
+  { label: "By Recipient", to: "/" },
+  { label: "Birthdays", to: "/" },
   { label: "Weddings", to: "/" },
+  { label: "Anniversaries", to: "/" },
   { label: "Occasions", to: "/" },
-  { label: "Recipients", to: "/" },
-  { label: "Glassware", to: "/" },
-  { label: "Mugs", to: "/" },
-  { label: "Photo Gifts", to: "/" },
-  { label: "Diamanté", to: "/" },
-  { label: "Sale", to: "/" },
+  { label: "Home & Garden", to: "/" },
+  { label: "Food & Drinks", to: "/" },
+  { label: "Fashion & Accs.", to: "/" },
+  { label: "Corporate Gifts", to: "/" },
 ];
 
 export function Header() {
