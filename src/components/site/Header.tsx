@@ -32,7 +32,7 @@ export function Header() {
             <span className="font-display text-2xl font-semibold tracking-tight leading-none">
               Maker<span className="text-primary">·</span>Mark
             </span>
-            <span className="hidden sm:block pl-3 border-l border-ink/15 text-[11px] font-medium uppercase tracking-[0.18em] text-foreground/60 leading-tight max-w-[12ch]">
+            <span className="block pl-3 border-l border-ink/15 text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.18em] text-foreground/60 leading-tight max-w-[12ch]">
               Personalised<br />Gifts
             </span>
           </Link>
