@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Search, ShoppingBag, Heart, Menu } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 
 const NAV = [
   { label: "Father's Day", to: "/" },
@@ -24,9 +25,31 @@ export function Header() {
 
       <nav className="bg-background/85 backdrop-blur-md border-b border-ink/5">
         <div className="max-w-[1400px] mx-auto px-6 h-20 flex items-center justify-between gap-6">
-          <button className="lg:hidden p-2 -ml-2" aria-label="Open menu">
-            <Menu className="size-5" />
-          </button>
+          <Sheet>
+            <SheetTrigger asChild>
+              <button className="lg:hidden p-2 -ml-2" aria-label="Open menu">
+                <Menu className="size-5" />
+              </button>
+            </SheetTrigger>
+            <SheetContent side="left" className="w-72 p-0">
+              <SheetHeader className="px-6 py-5 border-b border-ink/10">
+                <SheetTitle className="font-display text-xl font-semibold tracking-tight text-left">
+                  Maker<span className="text-primary">·</span>Mark
+                </SheetTitle>
+              </SheetHeader>
+              <div className="flex flex-col py-2">
+                {NAV.map((n) => (
+                  <Link
+                    key={n.label}
+                    to={n.to}
+                    className="px-6 py-3 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-secondary/60 transition-colors"
+                  >
+                    {n.label}
+                  </Link>
+                ))}
+              </div>
+            </SheetContent>
+          </Sheet>
 
           <Link to="/" className="flex flex-col items-center shrink-0 leading-none">
             <span className="font-display text-2xl font-semibold tracking-tight leading-none">
