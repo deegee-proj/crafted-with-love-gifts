@@ -17,9 +17,19 @@ const NAV = [
   { label: "Occasions", to: "/" },
 ];
 
-const TOP_NAV = NAV.filter(
-  (n) => n.label !== "Food & Drinks" && n.label !== "Fashion & Accs."
-);
+const TOP_NAV = [
+  { label: "Father's Day", to: "/" },
+  { label: "Birthdays", to: "/" },
+  { label: "Weddings", to: "/" },
+  { label: "Anniversaries", to: "/" },
+  { label: "Personalised Mugs", to: "/" },
+  { label: "Personalised Gifts", to: "/" },
+  { label: "Photo Gifts", to: "/" },
+  { label: "Pets & Pet Lovers", to: "/" },
+  { label: "Corporate Gifts", to: "/" },
+  { label: "By Recipient", to: "/" },
+  { label: "Occasions", to: "/" },
+];
 
 export function Header() {
   return (
