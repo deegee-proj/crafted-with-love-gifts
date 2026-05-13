@@ -37,7 +37,7 @@ export function Header() {
             </span>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-7 text-sm font-medium">
+          <div className="hidden lg:flex items-center gap-4 xl:gap-5 text-[12px] xl:text-[13px] font-medium whitespace-nowrap">
             {NAV.map((n) => (
               <Link
                 key={n.label}
