@@ -10,10 +10,16 @@ const NAV = [
   { label: "Home & Garden", to: "/" },
   { label: "Food & Drinks", to: "/" },
   { label: "Fashion & Accs.", to: "/" },
+  { label: "Memorial Gifts", to: "/" },
+  { label: "Pets & Pet Lovers", to: "/" },
   { label: "Corporate Gifts", to: "/" },
   { label: "By Recipient", to: "/" },
   { label: "Occasions", to: "/" },
 ];
+
+const TOP_NAV = NAV.filter(
+  (n) => n.label !== "Food & Drinks" && n.label !== "Fashion & Accs."
+);
 
 export function Header() {
   return (
@@ -61,7 +67,7 @@ export function Header() {
           </Link>
 
           <div className="hidden lg:flex items-center gap-4 xl:gap-5 text-[12px] xl:text-[13px] font-medium whitespace-nowrap">
-            {NAV.map((n) => (
+            {TOP_NAV.map((n) => (
               <Link
                 key={n.label}
                 to={n.to}
