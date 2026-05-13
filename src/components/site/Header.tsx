@@ -34,19 +34,6 @@ const TOP_NAV = [
   { label: "By Recipient", to: "/by-recipient" },
 ] as const;
 
-const TOP_NAV = [
-  { label: "Father's Day", to: "/" },
-  { label: "Personalised Gifts", to: "/" },
-  { label: "Personalised Mugs", to: "/" },
-  { label: "Photo Gifts", to: "/" },
-  { label: "Pets & Pet Lovers", to: "/" },
-  { label: "Corporate Gifts", to: "/" },
-  { label: "Birthdays", to: "/" },
-  { label: "Weddings", to: "/" },
-  { label: "Anniversaries", to: "/" },
-  { label: "Occasions", to: "/" },
-  { label: "By Recipient", to: "/" },
-];
 
 export function Header() {
   return (
