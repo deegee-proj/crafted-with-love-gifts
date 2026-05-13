@@ -28,12 +28,12 @@ export function Header() {
             <Menu className="size-5" />
           </button>
 
-          <Link to="/" className="flex items-center gap-3 shrink-0">
+          <Link to="/" className="flex flex-col items-start shrink-0 leading-none">
             <span className="font-display text-2xl font-semibold tracking-tight leading-none">
               Maker<span className="text-primary">·</span>Mark
             </span>
-            <span className="block pl-3 border-l border-ink/15 text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.18em] text-foreground/60 leading-tight max-w-[12ch]">
-              Personalised<br />Gifts
+            <span className="mt-1 italic font-serif text-[11px] sm:text-xs tracking-[0.22em] text-primary/80 lowercase">
+              personalised gifts
             </span>
           </Link>
 
