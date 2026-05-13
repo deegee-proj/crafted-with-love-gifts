@@ -28,11 +28,11 @@ export function Header() {
             <Menu className="size-5" />
           </button>
 
-          <Link to="/" className="flex flex-col items-start shrink-0 leading-none">
+          <Link to="/" className="flex flex-col items-center shrink-0 leading-none">
             <span className="font-display text-2xl font-semibold tracking-tight leading-none">
               Maker<span className="text-primary">·</span>Mark
             </span>
-            <span className="mt-0.5 text-primary text-[10px] sm:text-[11px] tracking-[0.28em] lowercase leading-none" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400 }}>
+            <span className="mt-0.5 text-primary text-[10px] sm:text-[11px] tracking-[0.08em] lowercase leading-none" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400 }}>
               personalised gifts
             </span>
           </Link>
