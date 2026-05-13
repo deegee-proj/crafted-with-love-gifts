@@ -18,6 +18,7 @@ export function Bestsellers() {
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-3">Studio favourites</p>
           <h2 className="text-4xl md:text-5xl font-semibold tracking-tight">This week's bestsellers.</h2>
+          <p className="mt-3 text-sm text-foreground/60 max-w-[52ch]">Every personalised product is hand-finished by our UK studio team.</p>
         </div>
       </div>
 
