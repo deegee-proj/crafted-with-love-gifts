@@ -6,6 +6,7 @@ import { Occasions } from "@/components/site/Occasions";
 import { Bestsellers } from "@/components/site/Bestsellers";
 import { HowItWorks } from "@/components/site/HowItWorks";
 import { Testimonials } from "@/components/site/Testimonials";
+import { About } from "@/components/site/About";
 import { Newsletter } from "@/components/site/Newsletter";
 import { Footer } from "@/components/site/Footer";
 
