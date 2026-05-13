@@ -3,33 +3,37 @@ import { Search, ShoppingBag, Heart, Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 
 const NAV = [
-  { label: "Father's Day", to: "/" },
-  { label: "Birthdays", to: "/" },
-  { label: "Weddings", to: "/" },
-  { label: "Anniversaries", to: "/" },
-  { label: "Home & Garden", to: "/" },
-  { label: "Food & Drinks", to: "/" },
-  { label: "Fashion & Accs.", to: "/" },
-  { label: "Memorial Gifts", to: "/" },
-  { label: "Pets & Pet Lovers", to: "/" },
-  { label: "Corporate Gifts", to: "/" },
-  { label: "By Recipient", to: "/" },
-  { label: "Occasions", to: "/" },
-];
+  { label: "Father's Day", to: "/fathers-day" },
+  { label: "Personalised Gifts", to: "/personalised-gifts" },
+  { label: "Personalised Mugs", to: "/personalised-mugs" },
+  { label: "Photo Gifts", to: "/photo-gifts" },
+  { label: "Pets & Pet Lovers", to: "/pets" },
+  { label: "Corporate Gifts", to: "/corporate-gifts" },
+  { label: "Birthdays", to: "/birthdays" },
+  { label: "Weddings", to: "/weddings" },
+  { label: "Anniversaries", to: "/anniversaries" },
+  { label: "Occasions", to: "/occasions" },
+  { label: "By Recipient", to: "/by-recipient" },
+  { label: "Home & Garden", to: "/home-garden" },
+  { label: "Food & Drinks", to: "/food-drinks" },
+  { label: "Fashion & Accs.", to: "/fashion-accessories" },
+  { label: "Memorial Gifts", to: "/memorial-gifts" },
+] as const;
 
 const TOP_NAV = [
-  { label: "Father's Day", to: "/" },
-  { label: "Personalised Gifts", to: "/" },
-  { label: "Personalised Mugs", to: "/" },
-  { label: "Photo Gifts", to: "/" },
-  { label: "Pets & Pet Lovers", to: "/" },
-  { label: "Corporate Gifts", to: "/" },
-  { label: "Birthdays", to: "/" },
-  { label: "Weddings", to: "/" },
-  { label: "Anniversaries", to: "/" },
-  { label: "Occasions", to: "/" },
-  { label: "By Recipient", to: "/" },
-];
+  { label: "Father's Day", to: "/fathers-day" },
+  { label: "Personalised Gifts", to: "/personalised-gifts" },
+  { label: "Personalised Mugs", to: "/personalised-mugs" },
+  { label: "Photo Gifts", to: "/photo-gifts" },
+  { label: "Pets & Pet Lovers", to: "/pets" },
+  { label: "Corporate Gifts", to: "/corporate-gifts" },
+  { label: "Birthdays", to: "/birthdays" },
+  { label: "Weddings", to: "/weddings" },
+  { label: "Anniversaries", to: "/anniversaries" },
+  { label: "Occasions", to: "/occasions" },
+  { label: "By Recipient", to: "/by-recipient" },
+] as const;
+
 
 export function Header() {
   return (
