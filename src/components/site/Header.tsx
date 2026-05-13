@@ -3,15 +3,15 @@ import { Search, ShoppingBag, Heart, Menu } from "lucide-react";
 
 const NAV = [
   { label: "Father's Day", to: "/" },
-  { label: "By Recipient", to: "/" },
   { label: "Birthdays", to: "/" },
   { label: "Weddings", to: "/" },
   { label: "Anniversaries", to: "/" },
-  { label: "Occasions", to: "/" },
   { label: "Home & Garden", to: "/" },
   { label: "Food & Drinks", to: "/" },
   { label: "Fashion & Accs.", to: "/" },
   { label: "Corporate Gifts", to: "/" },
+  { label: "By Recipient", to: "/" },
+  { label: "Occasions", to: "/" },
 ];
 
 export function Header() {
@@ -50,14 +50,6 @@ export function Header() {
           </div>
 
           <div className="flex items-center gap-2">
-            <div className="hidden md:flex items-center gap-2 bg-secondary/60 rounded-full px-4 h-10 w-56">
-              <Search className="size-4 text-muted-foreground" />
-              <input
-                placeholder="Search gifts, names, occasions…"
-                className="bg-transparent text-sm w-full outline-none placeholder:text-muted-foreground"
-                aria-label="Search products"
-              />
-            </div>
             <button className="size-10 grid place-items-center rounded-full hover:bg-secondary transition-colors" aria-label="Wishlist">
               <Heart className="size-5" />
             </button>
@@ -65,6 +57,18 @@ export function Header() {
               <ShoppingBag className="size-5" />
               <span className="absolute -top-0.5 -right-0.5 size-4 rounded-full bg-primary text-primary-foreground text-[10px] font-bold grid place-items-center">0</span>
             </button>
+          </div>
+        </div>
+
+        {/* Search row */}
+        <div className="max-w-[1400px] mx-auto px-6 pb-3">
+          <div className="flex items-center gap-2 bg-secondary/60 rounded-full px-4 h-9 w-full max-w-md mx-auto">
+            <Search className="size-4 text-muted-foreground" />
+            <input
+              placeholder="Search gifts, names, occasions…"
+              className="bg-transparent text-sm w-full outline-none placeholder:text-muted-foreground"
+              aria-label="Search products"
+            />
           </div>
         </div>
       </nav>
