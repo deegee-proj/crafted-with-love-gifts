@@ -72,7 +72,7 @@ export function Hero() {
                 "★ Feefo Platinum Service 2025",
                 "Free UK delivery over £40",
                 "Live preview on every product",
-                "1,000,000+ happy customers",
+                "Trusted by thousands of UK gift-givers",
                 "Engraved & dispatched within 24h",
                 "Hand-finished in London",
               ].map((t) => (
