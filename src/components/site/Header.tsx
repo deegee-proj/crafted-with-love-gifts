@@ -19,7 +19,7 @@ export function Header() {
     <header className="sticky top-0 z-50">
       {/* Announcement */}
       <div className="bg-ink text-cream text-[11px] tracking-[0.18em] uppercase font-medium text-center py-2">
-        Free UK delivery on orders over £50 · Live preview on selected products · Hand-finished in the UK
+        Free UK delivery on orders over £50 · Live preview on selected products
       </div>
 
       <nav className="bg-background/85 backdrop-blur-md border-b border-ink/5">
