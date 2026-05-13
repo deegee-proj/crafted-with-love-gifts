@@ -27,7 +27,7 @@ export function Footer() {
               Maker<span className="text-primary">·</span>Mark
             </div>
             <p className="mt-4 text-sm text-cream/60 max-w-[36ch] leading-relaxed">
-              Personalised gifts, engraved and hand-finished in the UK. Fast UK delivery and worldwide shipping since 2021.
+              Personalised gifts, engraved and hand-finished in the UK. Serving customers across the UK, including London, Birmingham, Manchester, Glasgow, Swansea and Dublin.
             </p>
             <div className="mt-6 flex gap-2">
               {["Instagram", "TikTok", "Pinterest"].map((s) => (
