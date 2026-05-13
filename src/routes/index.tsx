@@ -63,6 +63,7 @@ function Home() {
         <Bestsellers />
         <HowItWorks />
         <Testimonials />
+        <About />
         <Newsletter />
       </main>
       <Footer />
