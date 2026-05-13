@@ -49,6 +49,22 @@ export function Footer() {
           ))}
         </div>
 
+        <div className="pb-10">
+          <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-cream/60 mb-5">Visit Our Studio</h4>
+          <div className="rounded-2xl overflow-hidden border border-cream/10 shadow-soft">
+            <iframe
+              title="Maker·Mark Studios — Birmingham city centre"
+              src="https://www.google.com/maps?q=Birmingham+city+centre,+UK&output=embed"
+              width="100%"
+              height="280"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              style={{ border: 0, filter: "grayscale(0.3) contrast(1.05)" }}
+              allowFullScreen
+            />
+          </div>
+        </div>
+
         <div className="pt-8 border-t border-cream/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-cream/50">
           <div>© {new Date().getFullYear()} Maker·Mark Studios Ltd. Crafted in Birmingham.</div>
           <div className="flex gap-6">
