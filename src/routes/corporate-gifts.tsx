@@ -253,12 +253,12 @@ function CorporatePage() {
                 </div>
                 <div className="hidden md:grid absolute -left-6 -bottom-6 grid-cols-2 gap-3 w-[280px] rounded-2xl border border-ink/10 bg-card/95 backdrop-blur p-4 shadow-[var(--shadow-soft)]">
                   <Stat n="25+" label="Min. order" />
-                  <Stat n="2–3w" label="Turnaround" />
+                  <Stat n="Express" label="Turnaround available" />
                 </div>
               </div>
               <div className="md:hidden mt-5 grid grid-cols-2 gap-3">
                 <Stat n="25+" label="Minimum order" />
-                <Stat n="2–3w" label="Typical turnaround" />
+                <Stat n="Express" label="Turnaround available" />
                 <Stat n="500+" label="Happy customers" />
                 <Stat n="UK" label="Made & dispatched" />
               </div>
