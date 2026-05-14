@@ -24,7 +24,7 @@ const BADGES = [
   {
     icon: Star,
     title: "Rated Excellent",
-    sub: "From 500+ happy customers",
+    sub: "From 1000+ happy customers",
   },
   {
     icon: Lock,
