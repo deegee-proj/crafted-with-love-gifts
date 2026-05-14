@@ -277,7 +277,7 @@ function CorporatePage() {
             <p className="text-center text-[11px] tracking-[0.24em] uppercase text-foreground/60 font-semibold">
               Trusted across the UK
             </p>
-            <ul className="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3">
+            <ul className="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
               {[
                 { icon: Cpu, label: "Tech & SaaS" },
                 { icon: HardHat, label: "Construction & Manufacturing" },
@@ -285,7 +285,6 @@ function CorporatePage() {
                 { icon: HeartPulse, label: "NHS & Healthcare" },
                 { icon: Clapperboard, label: "Media & Entertainment" },
                 { icon: Banknote, label: "Finance & Professional Services" },
-                { icon: GraduationCap, label: "Education & Universities" },
               ].map((s) => (
                 <li
                   key={s.label}
