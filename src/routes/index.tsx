@@ -8,6 +8,7 @@ import { Bestsellers } from "@/components/site/Bestsellers";
 import { HowItWorks } from "@/components/site/HowItWorks";
 import { Testimonials } from "@/components/site/Testimonials";
 import { About } from "@/components/site/About";
+import { FAQ, FAQS } from "@/components/site/FAQ";
 import { Newsletter } from "@/components/site/Newsletter";
 import { Footer } from "@/components/site/Footer";
 
@@ -107,6 +108,18 @@ export const Route = createFileRoute("/")({
           },
         }),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: FAQS.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }),
+      },
     ],
   }),
   component: Home,
@@ -125,6 +138,7 @@ function Home() {
         <HowItWorks />
         <Testimonials />
         <About />
+        <FAQ />
         <Newsletter />
       </main>
       <Footer />
