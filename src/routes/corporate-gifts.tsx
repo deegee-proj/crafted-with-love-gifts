@@ -112,12 +112,12 @@ const SERVICES = [
 ];
 
 const RANGES = [
-  { icon: Wine, title: "Engraved glassware & decanters", body: "Tumblers, flutes, hi-balls, crystal decanters.", img: corpGlassware, count: "120+ pieces" },
-  { icon: Award, title: "Awards & trophies", body: "Year-end, sales, long-service and partner awards.", img: corpAwards, count: "60+ designs" },
-  { icon: PenLine, title: "Executive pens & stationery", body: "Engraved metal and leather, debossed portfolios.", img: corpPens, count: "40+ designs" },
-  { icon: Notebook, title: "Branded notebooks & journals", body: "Foiled, embossed or full-print covers.", img: corpNotebooks, count: "30+ designs" },
-  { icon: Coffee, title: "Personalised mugs & drinkware", body: "Ceramic, enamel, insulated bottles.", img: corpDrinkware, count: "80+ pieces" },
-  { icon: Gift, title: "Welcome & client hampers", body: "Curated sets in co-branded packaging.", img: corpHampers, count: "Custom builds" },
+  { icon: Wine, title: "Logo engraved glassware", body: "Tumblers, hi-balls, flutes and crystal decanters etched with your brand.", img: corpGlassware, count: "120+ pieces" },
+  { icon: Award, title: "Awards & trophies", body: "Year-end, sales, long-service and partner awards in crystal and glass.", img: corpAwards, count: "60+ designs" },
+  { icon: Gift, title: "Engraved wine boxes", body: "Solid oak presentation boxes with bottle, stopper and corkscrew.", img: corpWineboxes, count: "Single & double" },
+  { icon: PenLine, title: "Logo engraved photo frames", body: "Wooden, glass and metal frames engraved with your brand mark.", img: corpFrames, count: "30+ styles" },
+  { icon: Coffee, title: "Promotional mugs & bottles", body: "Ceramic mugs, enamel, insulated bottles and travel cups.", img: corpDrinkware, count: "80+ pieces" },
+  { icon: Boxes, title: "Promotional gifts", body: "Pens, keyrings, bottle openers, totes and branded giveaways.", img: corpPromo, count: "Custom builds" },
 ];
 
 const INDUSTRIES = [
