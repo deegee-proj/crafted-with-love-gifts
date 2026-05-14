@@ -80,9 +80,6 @@ export function TrustBar() {
             <h3 className="font-display text-xl md:text-2xl font-semibold tracking-tight">
               Accepted Payment Methods
             </h3>
-            <p className="text-xs md:text-sm text-foreground/60 max-w-md">
-              Pay your way — all major debit and credit cards, wallets and buy-now-pay-later options.
-            </p>
           </div>
           <ul
             aria-label="Accepted payment methods"
