@@ -1,4 +1,4 @@
-import { Truck, ShieldCheck, Sparkles, Star, Lock, RotateCcw } from "lucide-react";
+import { Truck, Sparkles, Star, Lock, RotateCcw } from "lucide-react";
 
 const BADGES = [
   {
