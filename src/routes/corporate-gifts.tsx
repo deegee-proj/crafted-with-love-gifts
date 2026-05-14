@@ -232,22 +232,35 @@ function CorporatePage() {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="rounded-3xl border border-ink/10 bg-card/70 backdrop-blur p-6 md:p-8 shadow-[var(--shadow-soft)]">
-                <div className="grid grid-cols-2 gap-4">
-                  <Stat n="25+" label="Minimum order" />
-                  <Stat n="2–3w" label="Typical turnaround" />
-                  <Stat n="500+" label="Happy customers" />
-                  <Stat n="UK" label="Made & dispatched" />
-                </div>
-                <div className="mt-6 rounded-2xl bg-background/70 border border-ink/10 p-5">
-                  <div className="text-[11px] tracking-[0.22em] uppercase text-primary font-semibold">
-                    Christmas
+              <div className="relative">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-ink/10 shadow-[var(--shadow-soft)]">
+                  <img
+                    src={corpHero}
+                    alt="Branded corporate gift box with engraved decanter, leather notebook and engraved pen"
+                    width={1600}
+                    height={1200}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink/55 via-ink/0 to-transparent" />
+                  <div className="absolute left-5 right-5 bottom-5 rounded-2xl bg-background/85 backdrop-blur p-4 border border-ink/10">
+                    <div className="text-[10px] tracking-[0.22em] uppercase text-primary font-semibold">
+                      Christmas
+                    </div>
+                    <p className="mt-1 text-xs text-foreground/80 leading-snug">
+                      Christmas slots fill fast — book before October to guarantee delivery.
+                    </p>
                   </div>
-                  <p className="mt-1 text-sm text-foreground/75">
-                    Christmas corporate orders fill fast — book your production slot before
-                    October to guarantee delivery.
-                  </p>
                 </div>
+                <div className="hidden md:grid absolute -left-6 -bottom-6 grid-cols-2 gap-3 w-[280px] rounded-2xl border border-ink/10 bg-card/95 backdrop-blur p-4 shadow-[var(--shadow-soft)]">
+                  <Stat n="25+" label="Min. order" />
+                  <Stat n="2–3w" label="Turnaround" />
+                </div>
+              </div>
+              <div className="md:hidden mt-5 grid grid-cols-2 gap-3">
+                <Stat n="25+" label="Minimum order" />
+                <Stat n="2–3w" label="Typical turnaround" />
+                <Stat n="500+" label="Happy customers" />
+                <Stat n="UK" label="Made & dispatched" />
               </div>
             </div>
           </div>
