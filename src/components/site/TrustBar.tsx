@@ -29,7 +29,7 @@ const BADGES = [
   {
     icon: Lock,
     title: "Secure checkout",
-    sub: "PCI-compliant payments",
+    sub: "All major debit and credit cards accepted",
   },
 ];
 
