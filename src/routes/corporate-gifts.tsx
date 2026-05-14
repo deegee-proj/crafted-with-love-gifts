@@ -31,6 +31,12 @@ import {
   Paperclip,
   X,
   ChevronDown,
+  GraduationCap,
+  HeartPulse,
+  HandHeart,
+  Landmark,
+  Scale,
+  Building2,
 } from "lucide-react";
 import corpHero from "@/assets/corp-hero.jpg";
 import corpGlassware from "@/assets/corp-glassware.jpg";
@@ -265,6 +271,35 @@ function CorporatePage() {
                 <Stat n="UK" label="Made & dispatched" />
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Trusted across the UK — sectors */}
+        <section aria-label="Sectors we work with" className="border-b border-ink/10 bg-card">
+          <div className="max-w-[1400px] mx-auto px-6 py-10 md:py-14">
+            <p className="text-center text-[11px] tracking-[0.24em] uppercase text-foreground/60 font-semibold">
+              Trusted across the UK
+            </p>
+            <ul className="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+              {[
+                { icon: GraduationCap, label: "Universities & Colleges" },
+                { icon: HeartPulse, label: "NHS Trusts" },
+                { icon: HandHeart, label: "Charities & Foundations" },
+                { icon: Landmark, label: "Local Councils" },
+                { icon: Scale, label: "Law Firms" },
+                { icon: Building2, label: "Housing Associations" },
+              ].map((s) => (
+                <li
+                  key={s.label}
+                  className="flex flex-col items-center justify-center text-center gap-2 rounded-xl border border-ink/10 bg-background/70 px-4 py-5 hover:border-primary/30 hover:shadow-[0_8px_24px_-12px_rgba(0,0,0,0.15)] transition-all"
+                >
+                  <s.icon className="size-6 text-primary/80" strokeWidth={1.5} />
+                  <span className="text-xs md:text-[13px] font-medium text-foreground/80 leading-tight">
+                    {s.label}
+                  </span>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
