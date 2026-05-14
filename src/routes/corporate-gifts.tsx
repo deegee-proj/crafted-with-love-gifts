@@ -33,10 +33,10 @@ import {
 import corpHero from "@/assets/corp-hero.jpg";
 import corpGlassware from "@/assets/corp-glassware.jpg";
 import corpAwards from "@/assets/corp-awards.jpg";
-import corpPens from "@/assets/corp-pens.jpg";
-import corpNotebooks from "@/assets/corp-notebooks.jpg";
+import corpWineboxes from "@/assets/corp-wineboxes.jpg";
+import corpFrames from "@/assets/corp-frames.jpg";
 import corpDrinkware from "@/assets/corp-drinkware.jpg";
-import corpHampers from "@/assets/corp-hampers.jpg";
+import corpPromo from "@/assets/corp-promo.jpg";
 import corpProcess from "@/assets/corp-process.jpg";
 
 const TITLE = "Corporate Gifts UK | Branded & Personalised Business Gifts — Maker·Mark";
@@ -112,12 +112,12 @@ const SERVICES = [
 ];
 
 const RANGES = [
-  { icon: Wine, title: "Engraved glassware & decanters", body: "Tumblers, flutes, hi-balls, crystal decanters.", img: corpGlassware, count: "120+ pieces" },
-  { icon: Award, title: "Awards & trophies", body: "Year-end, sales, long-service and partner awards.", img: corpAwards, count: "60+ designs" },
-  { icon: PenLine, title: "Executive pens & stationery", body: "Engraved metal and leather, debossed portfolios.", img: corpPens, count: "40+ designs" },
-  { icon: Notebook, title: "Branded notebooks & journals", body: "Foiled, embossed or full-print covers.", img: corpNotebooks, count: "30+ designs" },
-  { icon: Coffee, title: "Personalised mugs & drinkware", body: "Ceramic, enamel, insulated bottles.", img: corpDrinkware, count: "80+ pieces" },
-  { icon: Gift, title: "Welcome & client hampers", body: "Curated sets in co-branded packaging.", img: corpHampers, count: "Custom builds" },
+  { icon: Wine, title: "Logo engraved glassware", body: "Tumblers, hi-balls, flutes and crystal decanters etched with your brand.", img: corpGlassware, count: "120+ pieces" },
+  { icon: Award, title: "Awards & trophies", body: "Year-end, sales, long-service and partner awards in crystal and glass.", img: corpAwards, count: "60+ designs" },
+  { icon: Gift, title: "Engraved wine boxes", body: "Solid oak presentation boxes with bottle, stopper and corkscrew.", img: corpWineboxes, count: "Single & double" },
+  { icon: PenLine, title: "Logo engraved photo frames", body: "Wooden, glass and metal frames engraved with your brand mark.", img: corpFrames, count: "30+ styles" },
+  { icon: Coffee, title: "Promotional mugs & bottles", body: "Ceramic mugs, enamel, insulated bottles and travel cups.", img: corpDrinkware, count: "80+ pieces" },
+  { icon: Boxes, title: "Promotional gifts", body: "Pens, keyrings, bottle openers, totes and branded giveaways.", img: corpPromo, count: "Custom builds" },
 ];
 
 const INDUSTRIES = [
