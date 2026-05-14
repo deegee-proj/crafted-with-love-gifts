@@ -43,7 +43,7 @@ export function TrustBar() {
     >
       <div className="max-w-[1400px] mx-auto px-6 py-10 md:py-14">
         {/* Trust badges */}
-        <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
+        <ul className="grid grid-cols-2 md:grid-cols-4 gap-5">
           {BADGES.map((b) => (
             <li
               key={b.title}
