@@ -89,12 +89,16 @@ export function TrustBar() {
             {PAYMENTS.map((p) => (
               <li
                 key={p}
-                className="inline-flex items-center gap-2 rounded-md border border-ink/10 bg-background px-3 py-2 text-xs font-semibold text-foreground/80"
+                className="inline-flex items-center rounded-md border border-ink/10 bg-background px-3 py-2 text-xs font-semibold text-foreground/80"
               >
                 {p === "PayPal" ? (
-                  <span className="text-[#003087]">Pay</span>
-                ) : null}
-                {p === "PayPal" ? <span className="text-[#0070E0]">Pal</span> : p}
+                  <>
+                    <span className="text-[#003087]">Pay</span>
+                    <span className="text-[#0070E0]">Pal</span>
+                  </>
+                ) : (
+                  p
+                )}
               </li>
             ))}
           </ul>
