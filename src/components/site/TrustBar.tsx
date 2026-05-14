@@ -1,4 +1,4 @@
-import { Truck, Sparkles, Star, Lock, RotateCcw } from "lucide-react";
+import { Truck, Sparkles, Star, Lock } from "lucide-react";
 
 const BADGES = [
   {
@@ -15,11 +15,6 @@ const BADGES = [
     icon: Star,
     title: "Rated Excellent",
     sub: "From 500+ happy customers",
-  },
-  {
-    icon: RotateCcw,
-    title: "Easy resolutions",
-    sub: "Friendly studio support",
   },
   {
     icon: Lock,
