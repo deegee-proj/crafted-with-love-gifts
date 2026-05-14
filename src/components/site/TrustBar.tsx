@@ -1,4 +1,14 @@
 import { Truck, Sparkles, Star, Lock } from "lucide-react";
+import {
+  FaCcVisa,
+  FaCcMastercard,
+  FaCcAmex,
+  FaCcPaypal,
+  FaCcApplePay,
+  FaGooglePay,
+} from "react-icons/fa6";
+import { SiKlarna, SiClearpay } from "react-icons/si";
+import type { IconType } from "react-icons";
 
 const BADGES = [
   {
@@ -23,16 +33,15 @@ const BADGES = [
   },
 ];
 
-const PAYMENTS = [
-  "Visa",
-  "Mastercard",
-  "American Express",
-  "Maestro",
-  "PayPal",
-  "Apple Pay",
-  "Google Pay",
-  "Klarna",
-  "Clearpay",
+const PAYMENTS: { name: string; Icon: IconType; color: string }[] = [
+  { name: "Visa", Icon: FaCcVisa, color: "#1A1F71" },
+  { name: "Mastercard", Icon: FaCcMastercard, color: "#EB001B" },
+  { name: "American Express", Icon: FaCcAmex, color: "#2E77BC" },
+  { name: "PayPal", Icon: FaCcPaypal, color: "#003087" },
+  { name: "Apple Pay", Icon: FaCcApplePay, color: "#000000" },
+  { name: "Google Pay", Icon: FaGooglePay, color: "#5F6368" },
+  { name: "Klarna", Icon: SiKlarna, color: "#FFA8CD" },
+  { name: "Clearpay", Icon: SiClearpay, color: "#B2FCE4" },
 ];
 
 export function TrustBar() {
