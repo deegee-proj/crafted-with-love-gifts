@@ -112,12 +112,12 @@ const SERVICES = [
 ];
 
 const RANGES = [
-  { icon: Wine, title: "Engraved glassware & decanters", body: "Tumblers, flutes, hi-balls, crystal decanters." },
-  { icon: Award, title: "Awards & trophies", body: "Year-end, sales, long-service and partner awards." },
-  { icon: PenLine, title: "Executive pens & stationery", body: "Engraved metal and leather, debossed portfolios." },
-  { icon: Notebook, title: "Branded notebooks & journals", body: "Foiled, embossed or full-print covers." },
-  { icon: Coffee, title: "Personalised mugs & drinkware", body: "Ceramic, enamel, insulated bottles." },
-  { icon: Gift, title: "Welcome & client hampers", body: "Curated sets in co-branded packaging." },
+  { icon: Wine, title: "Engraved glassware & decanters", body: "Tumblers, flutes, hi-balls, crystal decanters.", img: corpGlassware, count: "120+ pieces" },
+  { icon: Award, title: "Awards & trophies", body: "Year-end, sales, long-service and partner awards.", img: corpAwards, count: "60+ designs" },
+  { icon: PenLine, title: "Executive pens & stationery", body: "Engraved metal and leather, debossed portfolios.", img: corpPens, count: "40+ designs" },
+  { icon: Notebook, title: "Branded notebooks & journals", body: "Foiled, embossed or full-print covers.", img: corpNotebooks, count: "30+ designs" },
+  { icon: Coffee, title: "Personalised mugs & drinkware", body: "Ceramic, enamel, insulated bottles.", img: corpDrinkware, count: "80+ pieces" },
+  { icon: Gift, title: "Welcome & client hampers", body: "Curated sets in co-branded packaging.", img: corpHampers, count: "Custom builds" },
 ];
 
 const INDUSTRIES = [
