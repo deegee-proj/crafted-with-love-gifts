@@ -4,7 +4,7 @@ import { Hero } from "@/components/site/Hero";
 import { TrustBar } from "@/components/site/TrustBar";
 import { Categories } from "@/components/site/Categories";
 import { Occasions } from "@/components/site/Occasions";
-import { Bestsellers } from "@/components/site/Bestsellers";
+
 import { HowItWorks } from "@/components/site/HowItWorks";
 import { Testimonials } from "@/components/site/Testimonials";
 import { About } from "@/components/site/About";
