@@ -28,6 +28,8 @@ import {
   Send,
   CheckCircle2,
   HelpCircle,
+  Paperclip,
+  X,
   ChevronDown,
 } from "lucide-react";
 import corpHero from "@/assets/corp-hero.jpg";
@@ -570,9 +572,51 @@ function FAQList() {
   );
 }
 
+const MAX_FILE_BYTES = 10 * 1024 * 1024; // 10MB per file
+const MAX_TOTAL_BYTES = 25 * 1024 * 1024; // 25MB total
+const MAX_FILES = 5;
+const ACCEPTED_FILES = "image/*,.pdf,.ai,.eps,.svg,.psd,.doc,.docx,.xls,.xlsx,.zip";
+
+function formatBytes(n: number) {
+  if (n < 1024) return `${n} B`;
+  if (n < 1024 * 1024) return `${(n / 1024).toFixed(1)} KB`;
+  return `${(n / 1024 / 1024).toFixed(1)} MB`;
+}
+
 function EnquirySection() {
   const [sent, setSent] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [files, setFiles] = useState<File[]>([]);
+  const [fileError, setFileError] = useState<string | null>(null);
+
+  function addFiles(incoming: FileList | null) {
+    if (!incoming || incoming.length === 0) return;
+    setFileError(null);
+    const next = [...files];
+    for (const f of Array.from(incoming)) {
+      if (next.length >= MAX_FILES) {
+        setFileError(`You can attach up to ${MAX_FILES} files.`);
+        break;
+      }
+      if (f.size > MAX_FILE_BYTES) {
+        setFileError(`"${f.name}" is over 10MB.`);
+        continue;
+      }
+      if (next.some((x) => x.name === f.name && x.size === f.size)) continue;
+      next.push(f);
+    }
+    const total = next.reduce((s, f) => s + f.size, 0);
+    if (total > MAX_TOTAL_BYTES) {
+      setFileError("Total attachments exceed 25MB.");
+      return;
+    }
+    setFiles(next);
+  }
+
+  function removeFile(idx: number) {
+    setFiles((prev) => prev.filter((_, i) => i !== idx));
+    setFileError(null);
+  }
 
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -598,6 +642,15 @@ function EnquirySection() {
     }
     setErrors({});
     const d = parsed.data;
+    const attachLines = files.length
+      ? [
+          "",
+          `Attachments to follow (${files.length}):`,
+          ...files.map((f) => `• ${f.name} (${formatBytes(f.size)})`),
+          "",
+          "NOTE: Please attach the files above to this email before sending.",
+        ]
+      : [];
     const body = [
       `Name: ${d.name}`,
       `Company: ${d.company}`,
@@ -608,8 +661,9 @@ function EnquirySection() {
       d.deadline ? `Deadline: ${d.deadline}` : null,
       "",
       d.message,
+      ...attachLines,
     ]
-      .filter(Boolean)
+      .filter((l) => l !== null)
       .join("\n");
     window.location.href = `mailto:hello@makermarkgifts.co.uk?subject=${encodeURIComponent(
       `[Corporate enquiry] ${d.company}`
