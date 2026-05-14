@@ -100,7 +100,7 @@ const SERVICES = [
   {
     icon: Layers,
     title: "Bulk pricing",
-    body: "Tiered discounts from 25 units, with deeper rates for 100, 250 and 500+. Quoted per project, never opaque.",
+    body: "From a single bespoke piece to 5,000+ promotional gifts. Tiered discounts kick in as quantities grow — quoted per project, never opaque.",
   },
   {
     icon: Truck,
@@ -149,7 +149,7 @@ const STEPS = [
 const FAQS = [
   {
     q: "What's the minimum order quantity?",
-    a: "Our corporate pricing kicks in from 25 units, with deeper tiers at 100, 250 and 500+. We can sometimes accommodate smaller runs of 10–24 — just ask.",
+    a: "There's no minimum — we work from 1 bespoke piece (perfect for individual awards or executive gifts) up to 5,000+ promotional gifts. Tiered pricing improves as quantities grow.",
   },
   {
     q: "How long do corporate orders take?",
@@ -211,7 +211,7 @@ function CorporatePage() {
               <p className="mt-6 text-base md:text-lg text-foreground/75 leading-relaxed max-w-2xl">
                 Logo-engraved glassware, decanters, awards and beautifully packaged hampers —
                 hand-finished in our Birmingham studio with bulk pricing, branded packaging and a
-                dedicated account manager. From 25 units up to 5,000+.
+                dedicated account manager. From 1 bespoke piece to 5,000+ promotional gifts.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button asChild size="lg" className="gap-2">
@@ -227,7 +227,7 @@ function CorporatePage() {
               </div>
               <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-foreground/70">
                 {[
-                  "From 25 units",
+                  "From 1 piece to 5,000+",
                   "Hand-finished in the UK",
                   "Quotes within 1 working day",
                   "Branded packaging",
@@ -260,12 +260,12 @@ function CorporatePage() {
                   </div>
                 </div>
                 <div className="hidden md:grid absolute -left-6 -bottom-6 grid-cols-2 gap-3 w-[280px] rounded-2xl border border-ink/10 bg-card/95 backdrop-blur p-4 shadow-[var(--shadow-soft)]">
-                  <Stat n="25+" label="Min. order" />
+                  <Stat n="1–5,000+" label="Bespoke to bulk" />
                   <Stat n="Express" label="Turnaround available" />
                 </div>
               </div>
               <div className="md:hidden mt-5 grid grid-cols-2 gap-3">
-                <Stat n="25+" label="Minimum order" />
+                <Stat n="1–5,000+" label="Bespoke to bulk" />
                 <Stat n="Express" label="Turnaround available" />
                 <Stat n="1000+" label="Happy customers" />
                 <Stat n="UK" label="Made & dispatched" />
