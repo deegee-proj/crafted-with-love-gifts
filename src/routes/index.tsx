@@ -134,7 +134,7 @@ function Home() {
         <TrustBar />
         <Categories />
         <Occasions />
-        <Bestsellers />
+        
         <HowItWorks />
         <Testimonials />
         <About />
