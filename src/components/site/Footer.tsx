@@ -1,23 +1,10 @@
 const COLS = [
   {
-    title: "Shop",
-    links: ["New In", "Bestsellers", "Sale", "Gift Cards", "All Collections"],
-  },
-  {
-    title: "Occasions",
-    links: ["Weddings", "Birthdays", "Anniversary", "Engagement", "New Baby", "Christmas"],
-  },
-  {
-    title: "Recipients",
-    links: ["For Him", "For Her", "For Mum", "For Dad", "For Couples", "For Grandparents"],
-  },
-  {
     title: "Help",
     links: [
       { label: "Delivery Information", href: "/delivery" },
       { label: "Returns & Refunds", href: "/returns" },
       { label: "Track Order", href: "#" },
-      { label: "Personalisation Guide", href: "#" },
       { label: "Contact Us", href: "/contact" },
       { label: "FAQs", href: "#" },
     ],
@@ -63,7 +50,6 @@ export function Footer() {
         </div>
 
         <div className="pb-10">
-          <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-cream/60 mb-5">Visit Our Studio</h4>
           <div className="rounded-2xl overflow-hidden border border-cream/10 shadow-soft">
             <iframe
               title="Maker·Mark Studios — Birmingham city centre"
