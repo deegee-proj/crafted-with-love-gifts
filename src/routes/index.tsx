@@ -90,7 +90,7 @@ export const Route = createFileRoute("/")({
           aggregateRating: {
             "@type": "AggregateRating",
             ratingValue: "4.9",
-            reviewCount: "18402",
+            reviewCount: "512",
           },
         }),
       },
