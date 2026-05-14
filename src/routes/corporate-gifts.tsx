@@ -141,7 +141,7 @@ const INDUSTRIES = [
 
 const STEPS = [
   { n: "01", title: "Tell us your brief", body: "Quantity, budget per unit, timeline, recipients and logo files. Two minutes via the form below." },
-  { n: "02", title: "Get a tailored quote", body: "We send product options, mock-ups and tiered pricing — usually within one working day." },
+  { n: "02", title: "Get a tailored quote", body: "We send product options, mock-ups and tiered pricing — same day quotes on most enquiries." },
   { n: "03", title: "Approve & we make", body: "Sign off the digital proof and we hand-finish in our Birmingham studio." },
   { n: "04", title: "We dispatch", body: "Single shipment, split delivery to home addresses, or staged drops — your call." },
 ];
@@ -229,7 +229,7 @@ function CorporatePage() {
                 {[
                   "From 1 piece to 5,000+",
                   "Hand-finished in the UK",
-                  "Quotes within 1 working day",
+                  "Same day quotes",
                   "Branded packaging",
                 ].map((p) => (
                   <li key={p} className="inline-flex items-center gap-2">
@@ -720,7 +720,7 @@ function EnquirySection() {
           </h2>
           <p className="mt-5 text-foreground/70 leading-relaxed">
             Send us your brief — quantity, budget per unit, timeline and recipients. We come back
-            with product options, mock-ups and tiered pricing, usually within one working day.
+            with product options, mock-ups and tiered pricing — same day quotes on most enquiries.
           </p>
           <a
             href="mailto:hello@makermarkgifts.co.uk?subject=Corporate%20gifting%20enquiry"
@@ -752,7 +752,7 @@ function EnquirySection() {
                 </h3>
                 <p className="mt-3 text-foreground/70 max-w-md mx-auto">
                   We've opened your email app with everything pre-filled. Hit send and we'll come
-                  back within one working day.
+                  back the same day on most enquiries.
                 </p>
                 <Button onClick={() => setSent(false)} variant="outline" className="mt-6">
                   Send another enquiry
