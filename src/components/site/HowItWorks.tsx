@@ -1,5 +1,5 @@
 const STEPS = [
-  { n: "01", title: "Choose your gift", body: "Browse 500+ premium personalisable products from our London studio." },
+  { n: "01", title: "Choose your gift", body: "Browse 500+ premium personalisable products from our Birmingham studio." },
   { n: "02", title: "Make it personal", body: "Add a name, date or message and see a live preview before you buy." },
   { n: "03", title: "Hand-finished & shipped", body: "We engrave or print your gift and dispatch it within 24 hours." },
 ];

@@ -15,7 +15,7 @@ export function Hero() {
           </h1>
           <p className="mt-6 text-lg text-foreground/70 max-w-[52ch] leading-relaxed">
             Engraved glassware, custom mugs, photo frames and keepsakes — personalised in
-            our London studio with a live preview before you check out.
+            our Birmingham studio with a live preview before you check out.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-3">
@@ -74,7 +74,7 @@ export function Hero() {
                 "Live preview on every product",
                 "Trusted by thousands of UK gift-givers",
                 "Engraved & dispatched within 24h",
-                "Hand-finished in London",
+                "Hand-finished in Birmingham",
               ].map((t) => (
                 <span key={t} className="flex items-center gap-3">
                   {t} <span className="text-primary">●</span>
