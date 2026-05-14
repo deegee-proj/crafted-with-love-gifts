@@ -30,6 +30,14 @@ import {
   HelpCircle,
   ChevronDown,
 } from "lucide-react";
+import corpHero from "@/assets/corp-hero.jpg";
+import corpGlassware from "@/assets/corp-glassware.jpg";
+import corpAwards from "@/assets/corp-awards.jpg";
+import corpPens from "@/assets/corp-pens.jpg";
+import corpNotebooks from "@/assets/corp-notebooks.jpg";
+import corpDrinkware from "@/assets/corp-drinkware.jpg";
+import corpHampers from "@/assets/corp-hampers.jpg";
+import corpProcess from "@/assets/corp-process.jpg";
 
 const TITLE = "Corporate Gifts UK | Branded & Personalised Business Gifts — Maker·Mark";
 const DESCRIPTION =
@@ -104,12 +112,12 @@ const SERVICES = [
 ];
 
 const RANGES = [
-  { icon: Wine, title: "Engraved glassware & decanters", body: "Tumblers, flutes, hi-balls, crystal decanters." },
-  { icon: Award, title: "Awards & trophies", body: "Year-end, sales, long-service and partner awards." },
-  { icon: PenLine, title: "Executive pens & stationery", body: "Engraved metal and leather, debossed portfolios." },
-  { icon: Notebook, title: "Branded notebooks & journals", body: "Foiled, embossed or full-print covers." },
-  { icon: Coffee, title: "Personalised mugs & drinkware", body: "Ceramic, enamel, insulated bottles." },
-  { icon: Gift, title: "Welcome & client hampers", body: "Curated sets in co-branded packaging." },
+  { icon: Wine, title: "Engraved glassware & decanters", body: "Tumblers, flutes, hi-balls, crystal decanters.", img: corpGlassware, count: "120+ pieces" },
+  { icon: Award, title: "Awards & trophies", body: "Year-end, sales, long-service and partner awards.", img: corpAwards, count: "60+ designs" },
+  { icon: PenLine, title: "Executive pens & stationery", body: "Engraved metal and leather, debossed portfolios.", img: corpPens, count: "40+ designs" },
+  { icon: Notebook, title: "Branded notebooks & journals", body: "Foiled, embossed or full-print covers.", img: corpNotebooks, count: "30+ designs" },
+  { icon: Coffee, title: "Personalised mugs & drinkware", body: "Ceramic, enamel, insulated bottles.", img: corpDrinkware, count: "80+ pieces" },
+  { icon: Gift, title: "Welcome & client hampers", body: "Curated sets in co-branded packaging.", img: corpHampers, count: "Custom builds" },
 ];
 
 const INDUSTRIES = [
@@ -224,22 +232,35 @@ function CorporatePage() {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="rounded-3xl border border-ink/10 bg-card/70 backdrop-blur p-6 md:p-8 shadow-[var(--shadow-soft)]">
-                <div className="grid grid-cols-2 gap-4">
-                  <Stat n="25+" label="Minimum order" />
-                  <Stat n="2–3w" label="Typical turnaround" />
-                  <Stat n="500+" label="Happy customers" />
-                  <Stat n="UK" label="Made & dispatched" />
-                </div>
-                <div className="mt-6 rounded-2xl bg-background/70 border border-ink/10 p-5">
-                  <div className="text-[11px] tracking-[0.22em] uppercase text-primary font-semibold">
-                    Christmas
+              <div className="relative">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-ink/10 shadow-[var(--shadow-soft)]">
+                  <img
+                    src={corpHero}
+                    alt="Branded corporate gift box with engraved decanter, leather notebook and engraved pen"
+                    width={1600}
+                    height={1200}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink/55 via-ink/0 to-transparent" />
+                  <div className="absolute left-5 right-5 bottom-5 rounded-2xl bg-background/85 backdrop-blur p-4 border border-ink/10">
+                    <div className="text-[10px] tracking-[0.22em] uppercase text-primary font-semibold">
+                      Christmas
+                    </div>
+                    <p className="mt-1 text-xs text-foreground/80 leading-snug">
+                      Christmas slots fill fast — book before October to guarantee delivery.
+                    </p>
                   </div>
-                  <p className="mt-1 text-sm text-foreground/75">
-                    Christmas corporate orders fill fast — book your production slot before
-                    October to guarantee delivery.
-                  </p>
                 </div>
+                <div className="hidden md:grid absolute -left-6 -bottom-6 grid-cols-2 gap-3 w-[280px] rounded-2xl border border-ink/10 bg-card/95 backdrop-blur p-4 shadow-[var(--shadow-soft)]">
+                  <Stat n="25+" label="Min. order" />
+                  <Stat n="2–3w" label="Turnaround" />
+                </div>
+              </div>
+              <div className="md:hidden mt-5 grid grid-cols-2 gap-3">
+                <Stat n="25+" label="Minimum order" />
+                <Stat n="2–3w" label="Typical turnaround" />
+                <Stat n="500+" label="Happy customers" />
+                <Stat n="UK" label="Made & dispatched" />
               </div>
             </div>
           </div>
@@ -329,17 +350,84 @@ function CorporatePage() {
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {RANGES.map((r) => (
-              <article
+              <a
                 key={r.title}
-                className="group rounded-2xl border border-ink/10 bg-card p-6 hover:border-primary/30 transition-colors"
+                href="#enquiry"
+                className="group relative overflow-hidden rounded-3xl border border-ink/10 bg-card aspect-[4/5] flex flex-col justify-end transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]"
               >
-                <r.icon className="size-5 text-primary" />
-                <h3 className="mt-3 font-display text-lg font-semibold">{r.title}</h3>
-                <p className="mt-2 text-sm text-foreground/70">{r.body}</p>
-              </article>
+                <img
+                  src={r.img}
+                  alt={r.title}
+                  loading="lazy"
+                  width={1200}
+                  height={1200}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/30 to-ink/0" />
+                <div className="relative z-10 p-6 text-cream">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-cream/15 backdrop-blur px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em]">
+                    <r.icon className="size-3.5" /> {r.count}
+                  </span>
+                  <h3 className="mt-3 font-display text-xl md:text-2xl font-semibold leading-tight max-w-[18ch]">
+                    {r.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-cream/85 leading-relaxed">{r.body}</p>
+                  <span className="mt-4 inline-flex items-center gap-2 text-xs font-semibold border-b border-cream/60 pb-1 group-hover:border-primary group-hover:text-primary transition-colors">
+                    Get a quote <ArrowRight className="size-3.5" />
+                  </span>
+                </div>
+              </a>
             ))}
+          </div>
+        </section>
+
+        {/* Process image strip */}
+        <section className="bg-card border-y border-ink/10">
+          <div className="max-w-[1400px] mx-auto px-6 py-16 md:py-24 grid lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-6 order-2 lg:order-1 relative">
+              <div className="aspect-[16/10] overflow-hidden rounded-3xl border border-ink/10 shadow-[var(--shadow-soft)]">
+                <img
+                  src={corpProcess}
+                  alt="A craftsman laser-engraving a logo onto a crystal tumbler in our UK workshop"
+                  loading="lazy"
+                  width={1600}
+                  height={1000}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div className="lg:col-span-6 order-1 lg:order-2">
+              <span className="text-[11px] tracking-[0.22em] uppercase text-primary font-semibold">
+                Logo engraving service
+              </span>
+              <h2 className="mt-2 font-display text-3xl md:text-5xl font-semibold tracking-tight leading-tight">
+                Your logo, hand-engraved in our UK workshop.
+              </h2>
+              <p className="mt-5 text-foreground/70 leading-relaxed">
+                Send us your vector logo and we'll laser-engrave it onto crystal, glass, metal,
+                leather and wood. Every job is digitally proofed and signed off before production
+                — so the finish you approve is the finish your recipients open.
+              </p>
+              <ul className="mt-6 grid sm:grid-cols-2 gap-3 text-sm">
+                {[
+                  "Single-pass laser precision",
+                  "Digital mock-up for sign-off",
+                  "Free vectorisation if needed",
+                  "Multi-position engraving",
+                ].map((p) => (
+                  <li key={p} className="inline-flex items-center gap-2 text-foreground/80">
+                    <Check className="size-4 text-primary" /> {p}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Button asChild size="lg" className="gap-2">
+                  <a href="#enquiry">Request a sample <ArrowRight className="size-4" /></a>
+                </Button>
+              </div>
+            </div>
           </div>
         </section>
 
