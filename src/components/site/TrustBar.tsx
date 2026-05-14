@@ -1,4 +1,4 @@
-import { Truck, ShieldCheck, Sparkles, Star, Lock, RotateCcw } from "lucide-react";
+import { Truck, Sparkles, Star, Lock, RotateCcw } from "lucide-react";
 
 const BADGES = [
   {
@@ -12,14 +12,9 @@ const BADGES = [
     sub: "Made-to-order in Birmingham",
   },
   {
-    icon: ShieldCheck,
-    title: "Quality guarantee",
-    sub: "Damaged or faulty? We'll fix it",
-  },
-  {
     icon: Star,
     title: "Rated Excellent",
-    sub: "4.9 from 18,400+ reviews",
+    sub: "From 500+ happy customers",
   },
   {
     icon: RotateCcw,
