@@ -72,26 +72,32 @@ export function TrustBar() {
         </ul>
 
         {/* Payments */}
-        <div className="mt-10 pt-8 border-t border-ink/10 flex flex-col md:flex-row md:items-center gap-5 md:gap-8">
-          <div className="md:w-56 shrink-0">
-            <div className="font-display text-base font-semibold">
+        <div className="mt-10 pt-8 border-t border-ink/10">
+          <div className="flex flex-col items-center text-center gap-2">
+            <span className="text-[11px] tracking-[0.24em] uppercase text-primary font-semibold">
+              Secure Checkout
+            </span>
+            <h3 className="font-display text-xl md:text-2xl font-semibold tracking-tight">
               Accepted Payment Methods
-            </div>
+            </h3>
+            <p className="text-xs md:text-sm text-foreground/60 max-w-md">
+              Pay your way — all major debit and credit cards, wallets and buy-now-pay-later options.
+            </p>
           </div>
           <ul
             aria-label="Accepted payment methods"
-            className="flex flex-wrap items-center gap-2.5"
+            className="mt-6 flex flex-wrap items-center justify-center gap-3"
           >
             {PAYMENTS.map((p) => (
               <li
                 key={p.name}
                 title={p.name}
                 aria-label={p.name}
-                className="inline-flex items-center justify-center rounded-md border border-ink/10 bg-background h-9 w-14"
+                className="group inline-flex items-center justify-center rounded-xl border border-ink/10 bg-background h-14 w-20 shadow-[0_1px_0_rgba(0,0,0,0.02),0_4px_12px_-6px_rgba(0,0,0,0.12)] hover:shadow-[0_2px_0_rgba(0,0,0,0.03),0_10px_24px_-10px_rgba(0,0,0,0.18)] hover:-translate-y-0.5 transition-all duration-200"
               >
                 <p.Icon
                   aria-hidden
-                  className="h-5 w-auto"
+                  className="h-7 w-auto transition-transform duration-200 group-hover:scale-105"
                   style={{ color: p.color }}
                 />
               </li>
