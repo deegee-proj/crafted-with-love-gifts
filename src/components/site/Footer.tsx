@@ -18,7 +18,7 @@ const COLS = [
       { label: "Returns & Refunds", href: "/returns" },
       { label: "Track Order", href: "#" },
       { label: "Personalisation Guide", href: "#" },
-      { label: "Contact Us", href: "#" },
+      { label: "Contact Us", href: "/contact" },
       { label: "FAQs", href: "#" },
     ],
   },
