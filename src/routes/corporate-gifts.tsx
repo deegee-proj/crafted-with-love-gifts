@@ -28,6 +28,8 @@ import {
   Send,
   CheckCircle2,
   HelpCircle,
+  Paperclip,
+  X,
   ChevronDown,
 } from "lucide-react";
 import corpHero from "@/assets/corp-hero.jpg";
@@ -570,9 +572,51 @@ function FAQList() {
   );
 }
 
+const MAX_FILE_BYTES = 10 * 1024 * 1024; // 10MB per file
+const MAX_TOTAL_BYTES = 25 * 1024 * 1024; // 25MB total
+const MAX_FILES = 5;
+const ACCEPTED_FILES = "image/*,.pdf,.ai,.eps,.svg,.psd,.doc,.docx,.xls,.xlsx,.zip";
+
+function formatBytes(n: number) {
+  if (n < 1024) return `${n} B`;
+  if (n < 1024 * 1024) return `${(n / 1024).toFixed(1)} KB`;
+  return `${(n / 1024 / 1024).toFixed(1)} MB`;
+}
+
 function EnquirySection() {
   const [sent, setSent] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [files, setFiles] = useState<File[]>([]);
+  const [fileError, setFileError] = useState<string | null>(null);
+
+  function addFiles(incoming: FileList | null) {
+    if (!incoming || incoming.length === 0) return;
+    setFileError(null);
+    const next = [...files];
+    for (const f of Array.from(incoming)) {
+      if (next.length >= MAX_FILES) {
+        setFileError(`You can attach up to ${MAX_FILES} files.`);
+        break;
+      }
+      if (f.size > MAX_FILE_BYTES) {
+        setFileError(`"${f.name}" is over 10MB.`);
+        continue;
+      }
+      if (next.some((x) => x.name === f.name && x.size === f.size)) continue;
+      next.push(f);
+    }
+    const total = next.reduce((s, f) => s + f.size, 0);
+    if (total > MAX_TOTAL_BYTES) {
+      setFileError("Total attachments exceed 25MB.");
+      return;
+    }
+    setFiles(next);
+  }
+
+  function removeFile(idx: number) {
+    setFiles((prev) => prev.filter((_, i) => i !== idx));
+    setFileError(null);
+  }
 
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -598,6 +642,15 @@ function EnquirySection() {
     }
     setErrors({});
     const d = parsed.data;
+    const attachLines = files.length
+      ? [
+          "",
+          `Attachments to follow (${files.length}):`,
+          ...files.map((f) => `• ${f.name} (${formatBytes(f.size)})`),
+          "",
+          "NOTE: Please attach the files above to this email before sending.",
+        ]
+      : [];
     const body = [
       `Name: ${d.name}`,
       `Company: ${d.company}`,
@@ -608,8 +661,9 @@ function EnquirySection() {
       d.deadline ? `Deadline: ${d.deadline}` : null,
       "",
       d.message,
+      ...attachLines,
     ]
-      .filter(Boolean)
+      .filter((l) => l !== null)
       .join("\n");
     window.location.href = `mailto:hello@makermarkgifts.co.uk?subject=${encodeURIComponent(
       `[Corporate enquiry] ${d.company}`
@@ -728,6 +782,66 @@ function EnquirySection() {
                     required
                   />
                 </Field>
+                <div>
+                  <Label className="text-sm font-medium">
+                    Attach files <span className="text-foreground/50 font-normal">(Optional)</span>
+                  </Label>
+                  <p className="mt-1 text-xs text-foreground/60">
+                    Logos, brand guidelines, briefs or reference images. Up to {MAX_FILES} files, 10MB each.
+                  </p>
+                  <label
+                    htmlFor="attachments"
+                    className="mt-2 flex items-center justify-center gap-2 rounded-2xl border border-dashed border-ink/20 bg-card/50 px-4 py-5 text-sm text-foreground/70 cursor-pointer hover:border-primary/50 hover:bg-card transition-colors"
+                  >
+                    <Paperclip className="size-4" />
+                    <span>Click to choose images, PDFs or documents</span>
+                  </label>
+                  <input
+                    id="attachments"
+                    type="file"
+                    multiple
+                    accept={ACCEPTED_FILES}
+                    className="sr-only"
+                    onChange={(e) => {
+                      addFiles(e.target.files);
+                      e.target.value = "";
+                    }}
+                  />
+                  {fileError && (
+                    <p className="mt-2 text-xs text-destructive">{fileError}</p>
+                  )}
+                  {files.length > 0 && (
+                    <ul className="mt-3 grid gap-2">
+                      {files.map((f, i) => (
+                        <li
+                          key={`${f.name}-${i}`}
+                          className="flex items-center justify-between gap-3 rounded-xl border border-ink/10 bg-card/60 px-3 py-2 text-sm"
+                        >
+                          <span className="flex items-center gap-2 min-w-0">
+                            <Paperclip className="size-4 text-foreground/50 shrink-0" />
+                            <span className="truncate">{f.name}</span>
+                            <span className="text-xs text-foreground/50 shrink-0">
+                              {formatBytes(f.size)}
+                            </span>
+                          </span>
+                          <button
+                            type="button"
+                            onClick={() => removeFile(i)}
+                            className="text-foreground/50 hover:text-destructive transition-colors"
+                            aria-label={`Remove ${f.name}`}
+                          >
+                            <X className="size-4" />
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  {files.length > 0 && (
+                    <p className="mt-2 text-xs text-foreground/60">
+                      Your email app will open pre-filled — please attach the files above before sending.
+                    </p>
+                  )}
+                </div>
                 <div className="flex items-center justify-between gap-4 flex-wrap">
                   <p className="text-xs text-foreground/60 max-w-sm">
                     By sending this enquiry you agree to be contacted about your project. We
