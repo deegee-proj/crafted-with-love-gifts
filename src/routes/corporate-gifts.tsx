@@ -94,8 +94,8 @@ const SERVICES = [
   },
   {
     icon: Boxes,
-    title: "Branded packaging",
-    body: "Co-branded gift boxes, bands, tissue, swing tags and printed cards — your brand from outside in.",
+    title: "Gift presentation",
+    body: "Tissue paper, swing tags and personalised message cards to make every gift feel considered on arrival.",
   },
   {
     icon: Layers,
@@ -156,8 +156,8 @@ const FAQS = [
     a: "Typical turnaround is 2–3 weeks from approved proof for runs up to 250 units. Larger orders or peak periods (Christmas, awards season) need 4–6 weeks. Express slots are available.",
   },
   {
-    q: "Do you do branded packaging?",
-    a: "Yes — co-branded boxes, bands, tissue paper, swing tags and personalised message cards. We can mock the full unboxing for sign-off before production.",
+    q: "Can you add gift presentation?",
+    a: "Yes — tissue paper, swing tags and personalised message cards as standard. Get in touch about additional presentation options for your project.",
   },
   {
     q: "Can you ship to multiple home addresses?",
@@ -210,7 +210,7 @@ function CorporatePage() {
               </h1>
               <p className="mt-6 text-base md:text-lg text-foreground/75 leading-relaxed max-w-2xl">
                 Logo-engraved glassware, decanters, awards and beautifully packaged hampers —
-                hand-finished in our Birmingham studio with bulk pricing, branded packaging and a
+                hand-finished in our Birmingham studio with bulk pricing, gift presentation and a
                 dedicated account manager. From 1 bespoke piece to 5,000+ promotional gifts.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
@@ -230,7 +230,7 @@ function CorporatePage() {
                   "From 1 piece to 5,000+",
                   "Hand-finished in the UK",
                   "Same day quotes",
-                  "Branded packaging",
+                  "Gift presentation",
                 ].map((p) => (
                   <li key={p} className="inline-flex items-center gap-2">
                     <Check className="size-4 text-primary" /> {p}
