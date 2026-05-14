@@ -33,10 +33,10 @@ import {
 import corpHero from "@/assets/corp-hero.jpg";
 import corpGlassware from "@/assets/corp-glassware.jpg";
 import corpAwards from "@/assets/corp-awards.jpg";
-import corpPens from "@/assets/corp-pens.jpg";
-import corpNotebooks from "@/assets/corp-notebooks.jpg";
+import corpWineboxes from "@/assets/corp-wineboxes.jpg";
+import corpFrames from "@/assets/corp-frames.jpg";
 import corpDrinkware from "@/assets/corp-drinkware.jpg";
-import corpHampers from "@/assets/corp-hampers.jpg";
+import corpPromo from "@/assets/corp-promo.jpg";
 import corpProcess from "@/assets/corp-process.jpg";
 
 const TITLE = "Corporate Gifts UK | Branded & Personalised Business Gifts — Maker·Mark";
