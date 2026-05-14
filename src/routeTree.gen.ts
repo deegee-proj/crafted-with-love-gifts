@@ -21,6 +21,7 @@ import { Route as HomeGardenRouteImport } from './routes/home-garden'
 import { Route as FoodDrinksRouteImport } from './routes/food-drinks'
 import { Route as FathersDayRouteImport } from './routes/fathers-day'
 import { Route as FashionAccessoriesRouteImport } from './routes/fashion-accessories'
+import { Route as DeliveryRouteImport } from './routes/delivery'
 import { Route as CorporateGiftsRouteImport } from './routes/corporate-gifts'
 import { Route as ByRecipientRouteImport } from './routes/by-recipient'
 import { Route as BirthdaysRouteImport } from './routes/birthdays'
@@ -87,6 +88,11 @@ const FashionAccessoriesRoute = FashionAccessoriesRouteImport.update({
   path: '/fashion-accessories',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DeliveryRoute = DeliveryRouteImport.update({
+  id: '/delivery',
+  path: '/delivery',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CorporateGiftsRoute = CorporateGiftsRouteImport.update({
   id: '/corporate-gifts',
   path: '/corporate-gifts',
@@ -119,6 +125,7 @@ export interface FileRoutesByFullPath {
   '/birthdays': typeof BirthdaysRoute
   '/by-recipient': typeof ByRecipientRoute
   '/corporate-gifts': typeof CorporateGiftsRoute
+  '/delivery': typeof DeliveryRoute
   '/fashion-accessories': typeof FashionAccessoriesRoute
   '/fathers-day': typeof FathersDayRoute
   '/food-drinks': typeof FoodDrinksRoute
@@ -138,6 +145,7 @@ export interface FileRoutesByTo {
   '/birthdays': typeof BirthdaysRoute
   '/by-recipient': typeof ByRecipientRoute
   '/corporate-gifts': typeof CorporateGiftsRoute
+  '/delivery': typeof DeliveryRoute
   '/fashion-accessories': typeof FashionAccessoriesRoute
   '/fathers-day': typeof FathersDayRoute
   '/food-drinks': typeof FoodDrinksRoute
@@ -158,6 +166,7 @@ export interface FileRoutesById {
   '/birthdays': typeof BirthdaysRoute
   '/by-recipient': typeof ByRecipientRoute
   '/corporate-gifts': typeof CorporateGiftsRoute
+  '/delivery': typeof DeliveryRoute
   '/fashion-accessories': typeof FashionAccessoriesRoute
   '/fathers-day': typeof FathersDayRoute
   '/food-drinks': typeof FoodDrinksRoute
@@ -179,6 +188,7 @@ export interface FileRouteTypes {
     | '/birthdays'
     | '/by-recipient'
     | '/corporate-gifts'
+    | '/delivery'
     | '/fashion-accessories'
     | '/fathers-day'
     | '/food-drinks'
@@ -198,6 +208,7 @@ export interface FileRouteTypes {
     | '/birthdays'
     | '/by-recipient'
     | '/corporate-gifts'
+    | '/delivery'
     | '/fashion-accessories'
     | '/fathers-day'
     | '/food-drinks'
@@ -217,6 +228,7 @@ export interface FileRouteTypes {
     | '/birthdays'
     | '/by-recipient'
     | '/corporate-gifts'
+    | '/delivery'
     | '/fashion-accessories'
     | '/fathers-day'
     | '/food-drinks'
@@ -237,6 +249,7 @@ export interface RootRouteChildren {
   BirthdaysRoute: typeof BirthdaysRoute
   ByRecipientRoute: typeof ByRecipientRoute
   CorporateGiftsRoute: typeof CorporateGiftsRoute
+  DeliveryRoute: typeof DeliveryRoute
   FashionAccessoriesRoute: typeof FashionAccessoriesRoute
   FathersDayRoute: typeof FathersDayRoute
   FoodDrinksRoute: typeof FoodDrinksRoute
@@ -337,6 +350,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FashionAccessoriesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/delivery': {
+      id: '/delivery'
+      path: '/delivery'
+      fullPath: '/delivery'
+      preLoaderRoute: typeof DeliveryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/corporate-gifts': {
       id: '/corporate-gifts'
       path: '/corporate-gifts'
@@ -381,6 +401,7 @@ const rootRouteChildren: RootRouteChildren = {
   BirthdaysRoute: BirthdaysRoute,
   ByRecipientRoute: ByRecipientRoute,
   CorporateGiftsRoute: CorporateGiftsRoute,
+  DeliveryRoute: DeliveryRoute,
   FashionAccessoriesRoute: FashionAccessoriesRoute,
   FathersDayRoute: FathersDayRoute,
   FoodDrinksRoute: FoodDrinksRoute,
@@ -397,13 +418,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
