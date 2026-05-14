@@ -10,8 +10,10 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WeddingsRouteImport } from './routes/weddings'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ReturnsRouteImport } from './routes/returns'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PhotoGiftsRouteImport } from './routes/photo-gifts'
 import { Route as PetsRouteImport } from './routes/pets'
 import { Route as PersonalisedMugsRouteImport } from './routes/personalised-mugs'
@@ -35,6 +37,11 @@ const WeddingsRoute = WeddingsRouteImport.update({
   path: '/weddings',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -43,6 +50,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const ReturnsRoute = ReturnsRouteImport.update({
   id: '/returns',
   path: '/returns',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PhotoGiftsRoute = PhotoGiftsRouteImport.update({
@@ -149,8 +161,10 @@ export interface FileRoutesByFullPath {
   '/personalised-mugs': typeof PersonalisedMugsRoute
   '/pets': typeof PetsRoute
   '/photo-gifts': typeof PhotoGiftsRoute
+  '/privacy': typeof PrivacyRoute
   '/returns': typeof ReturnsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms': typeof TermsRoute
   '/weddings': typeof WeddingsRoute
 }
 export interface FileRoutesByTo {
@@ -171,8 +185,10 @@ export interface FileRoutesByTo {
   '/personalised-mugs': typeof PersonalisedMugsRoute
   '/pets': typeof PetsRoute
   '/photo-gifts': typeof PhotoGiftsRoute
+  '/privacy': typeof PrivacyRoute
   '/returns': typeof ReturnsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms': typeof TermsRoute
   '/weddings': typeof WeddingsRoute
 }
 export interface FileRoutesById {
@@ -194,8 +210,10 @@ export interface FileRoutesById {
   '/personalised-mugs': typeof PersonalisedMugsRoute
   '/pets': typeof PetsRoute
   '/photo-gifts': typeof PhotoGiftsRoute
+  '/privacy': typeof PrivacyRoute
   '/returns': typeof ReturnsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms': typeof TermsRoute
   '/weddings': typeof WeddingsRoute
 }
 export interface FileRouteTypes {
@@ -218,8 +236,10 @@ export interface FileRouteTypes {
     | '/personalised-mugs'
     | '/pets'
     | '/photo-gifts'
+    | '/privacy'
     | '/returns'
     | '/sitemap.xml'
+    | '/terms'
     | '/weddings'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -240,8 +260,10 @@ export interface FileRouteTypes {
     | '/personalised-mugs'
     | '/pets'
     | '/photo-gifts'
+    | '/privacy'
     | '/returns'
     | '/sitemap.xml'
+    | '/terms'
     | '/weddings'
   id:
     | '__root__'
@@ -262,8 +284,10 @@ export interface FileRouteTypes {
     | '/personalised-mugs'
     | '/pets'
     | '/photo-gifts'
+    | '/privacy'
     | '/returns'
     | '/sitemap.xml'
+    | '/terms'
     | '/weddings'
   fileRoutesById: FileRoutesById
 }
@@ -285,8 +309,10 @@ export interface RootRouteChildren {
   PersonalisedMugsRoute: typeof PersonalisedMugsRoute
   PetsRoute: typeof PetsRoute
   PhotoGiftsRoute: typeof PhotoGiftsRoute
+  PrivacyRoute: typeof PrivacyRoute
   ReturnsRoute: typeof ReturnsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  TermsRoute: typeof TermsRoute
   WeddingsRoute: typeof WeddingsRoute
 }
 
@@ -297,6 +323,13 @@ declare module '@tanstack/react-router' {
       path: '/weddings'
       fullPath: '/weddings'
       preLoaderRoute: typeof WeddingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -311,6 +344,13 @@ declare module '@tanstack/react-router' {
       path: '/returns'
       fullPath: '/returns'
       preLoaderRoute: typeof ReturnsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/photo-gifts': {
@@ -453,10 +493,22 @@ const rootRouteChildren: RootRouteChildren = {
   PersonalisedMugsRoute: PersonalisedMugsRoute,
   PetsRoute: PetsRoute,
   PhotoGiftsRoute: PhotoGiftsRoute,
+  PrivacyRoute: PrivacyRoute,
   ReturnsRoute: ReturnsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  TermsRoute: TermsRoute,
   WeddingsRoute: WeddingsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
