@@ -3,5 +3,5 @@
   "name": "crafted-with-love-gifts",
   "compatibility_date": "2026-05-14",
   "compatibility_flags": ["nodejs_compat"],
-  "pages_build_output_dir": "dist"
+  "pages_build_output_dir": "dist/client"
 }
