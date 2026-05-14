@@ -108,8 +108,8 @@ const SERVICES = [
   },
   {
     icon: ShieldCheck,
-    title: "Account-managed",
-    body: "One named contact from quote to delivery. No tickets, no chatbots, no chasing.",
+    title: "Dedicated Account Manager",
+    body: "From quote to delivery, you'll have one dedicated contact managing your order.",
   },
 ];
 
