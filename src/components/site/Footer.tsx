@@ -81,8 +81,8 @@ export function Footer() {
         <div className="pt-8 border-t border-cream/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-cream/50">
           <div>© {new Date().getFullYear()} Maker·Mark Studios Ltd. Crafted in Birmingham.</div>
           <div className="flex gap-6">
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
             <a href="#">Cookies</a>
             <a href="#">Accessibility</a>
           </div>
