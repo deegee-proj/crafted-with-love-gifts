@@ -7,7 +7,7 @@ import {
   FaCcApplePay,
   FaGooglePay,
 } from "react-icons/fa6";
-import { SiKlarna, SiClearpay } from "react-icons/si";
+import { SiKlarna, SiAfterpay } from "react-icons/si";
 import type { IconType } from "react-icons";
 
 const BADGES = [
@@ -41,7 +41,7 @@ const PAYMENTS: { name: string; Icon: IconType; color: string }[] = [
   { name: "Apple Pay", Icon: FaCcApplePay, color: "#000000" },
   { name: "Google Pay", Icon: FaGooglePay, color: "#5F6368" },
   { name: "Klarna", Icon: SiKlarna, color: "#FFA8CD" },
-  { name: "Clearpay", Icon: SiClearpay, color: "#B2FCE4" },
+  { name: "Clearpay", Icon: SiAfterpay, color: "#B2FCE4" },
 ];
 
 export function TrustBar() {
@@ -84,17 +84,16 @@ export function TrustBar() {
           >
             {PAYMENTS.map((p) => (
               <li
-                key={p}
-                className="inline-flex items-center rounded-md border border-ink/10 bg-background px-3 py-2 text-xs font-semibold text-foreground/80"
+                key={p.name}
+                title={p.name}
+                aria-label={p.name}
+                className="inline-flex items-center justify-center rounded-md border border-ink/10 bg-background h-9 w-14"
               >
-                {p === "PayPal" ? (
-                  <>
-                    <span className="text-[#003087]">Pay</span>
-                    <span className="text-[#0070E0]">Pal</span>
-                  </>
-                ) : (
-                  p
-                )}
+                <p.Icon
+                  aria-hidden
+                  className="h-5 w-auto"
+                  style={{ color: p.color }}
+                />
               </li>
             ))}
           </ul>
