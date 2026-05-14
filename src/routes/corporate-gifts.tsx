@@ -371,7 +371,7 @@ function CorporatePage() {
                 Product range
               </span>
               <h2 className="mt-2 font-display text-3xl md:text-5xl font-semibold tracking-tight leading-tight">
-                What we engrave & brand.
+                Engrave . Print . Brand
               </h2>
             </div>
             <Link
