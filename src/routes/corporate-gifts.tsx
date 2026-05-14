@@ -103,9 +103,9 @@ const SERVICES = [
     body: "From a single bespoke piece to 5,000+ promotional gifts. Tiered discounts kick in as quantities grow — quoted per project, never opaque.",
   },
   {
-    icon: Truck,
-    title: "Split UK delivery",
-    body: "Send a single shipment to HQ or split to hundreds of home addresses with our managed dispatch service.",
+    icon: Gift,
+    title: "Branded promotional gifts",
+    body: "Pens, mugs, bottles, totes, keyrings and giveaways branded with your logo — perfect for events, conferences and onboarding packs.",
   },
   {
     icon: CalendarClock,
