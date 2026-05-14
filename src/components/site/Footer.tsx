@@ -15,6 +15,7 @@ const COLS = [
     title: "Help",
     links: [
       { label: "Delivery Information", href: "/delivery" },
+      { label: "Returns & Refunds", href: "/returns" },
       { label: "Track Order", href: "#" },
       { label: "Personalisation Guide", href: "#" },
       { label: "Contact Us", href: "#" },

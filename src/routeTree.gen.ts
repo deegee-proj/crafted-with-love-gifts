@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WeddingsRouteImport } from './routes/weddings'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ReturnsRouteImport } from './routes/returns'
 import { Route as PhotoGiftsRouteImport } from './routes/photo-gifts'
 import { Route as PetsRouteImport } from './routes/pets'
 import { Route as PersonalisedMugsRouteImport } from './routes/personalised-mugs'
@@ -36,6 +37,11 @@ const WeddingsRoute = WeddingsRouteImport.update({
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReturnsRoute = ReturnsRouteImport.update({
+  id: '/returns',
+  path: '/returns',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PhotoGiftsRoute = PhotoGiftsRouteImport.update({
@@ -136,6 +142,7 @@ export interface FileRoutesByFullPath {
   '/personalised-mugs': typeof PersonalisedMugsRoute
   '/pets': typeof PetsRoute
   '/photo-gifts': typeof PhotoGiftsRoute
+  '/returns': typeof ReturnsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/weddings': typeof WeddingsRoute
 }
@@ -156,6 +163,7 @@ export interface FileRoutesByTo {
   '/personalised-mugs': typeof PersonalisedMugsRoute
   '/pets': typeof PetsRoute
   '/photo-gifts': typeof PhotoGiftsRoute
+  '/returns': typeof ReturnsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/weddings': typeof WeddingsRoute
 }
@@ -177,6 +185,7 @@ export interface FileRoutesById {
   '/personalised-mugs': typeof PersonalisedMugsRoute
   '/pets': typeof PetsRoute
   '/photo-gifts': typeof PhotoGiftsRoute
+  '/returns': typeof ReturnsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/weddings': typeof WeddingsRoute
 }
@@ -199,6 +208,7 @@ export interface FileRouteTypes {
     | '/personalised-mugs'
     | '/pets'
     | '/photo-gifts'
+    | '/returns'
     | '/sitemap.xml'
     | '/weddings'
   fileRoutesByTo: FileRoutesByTo
@@ -219,6 +229,7 @@ export interface FileRouteTypes {
     | '/personalised-mugs'
     | '/pets'
     | '/photo-gifts'
+    | '/returns'
     | '/sitemap.xml'
     | '/weddings'
   id:
@@ -239,6 +250,7 @@ export interface FileRouteTypes {
     | '/personalised-mugs'
     | '/pets'
     | '/photo-gifts'
+    | '/returns'
     | '/sitemap.xml'
     | '/weddings'
   fileRoutesById: FileRoutesById
@@ -260,6 +272,7 @@ export interface RootRouteChildren {
   PersonalisedMugsRoute: typeof PersonalisedMugsRoute
   PetsRoute: typeof PetsRoute
   PhotoGiftsRoute: typeof PhotoGiftsRoute
+  ReturnsRoute: typeof ReturnsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   WeddingsRoute: typeof WeddingsRoute
 }
@@ -278,6 +291,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/returns': {
+      id: '/returns'
+      path: '/returns'
+      fullPath: '/returns'
+      preLoaderRoute: typeof ReturnsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/photo-gifts': {
@@ -412,6 +432,7 @@ const rootRouteChildren: RootRouteChildren = {
   PersonalisedMugsRoute: PersonalisedMugsRoute,
   PetsRoute: PetsRoute,
   PhotoGiftsRoute: PhotoGiftsRoute,
+  ReturnsRoute: ReturnsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   WeddingsRoute: WeddingsRoute,
 }
