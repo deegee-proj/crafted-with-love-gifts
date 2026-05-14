@@ -24,6 +24,7 @@ import { Route as FathersDayRouteImport } from './routes/fathers-day'
 import { Route as FashionAccessoriesRouteImport } from './routes/fashion-accessories'
 import { Route as DeliveryRouteImport } from './routes/delivery'
 import { Route as CorporateGiftsRouteImport } from './routes/corporate-gifts'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ByRecipientRouteImport } from './routes/by-recipient'
 import { Route as BirthdaysRouteImport } from './routes/birthdays'
 import { Route as AnniversariesRouteImport } from './routes/anniversaries'
@@ -104,6 +105,11 @@ const CorporateGiftsRoute = CorporateGiftsRouteImport.update({
   path: '/corporate-gifts',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ByRecipientRoute = ByRecipientRouteImport.update({
   id: '/by-recipient',
   path: '/by-recipient',
@@ -130,6 +136,7 @@ export interface FileRoutesByFullPath {
   '/anniversaries': typeof AnniversariesRoute
   '/birthdays': typeof BirthdaysRoute
   '/by-recipient': typeof ByRecipientRoute
+  '/contact': typeof ContactRoute
   '/corporate-gifts': typeof CorporateGiftsRoute
   '/delivery': typeof DeliveryRoute
   '/fashion-accessories': typeof FashionAccessoriesRoute
@@ -151,6 +158,7 @@ export interface FileRoutesByTo {
   '/anniversaries': typeof AnniversariesRoute
   '/birthdays': typeof BirthdaysRoute
   '/by-recipient': typeof ByRecipientRoute
+  '/contact': typeof ContactRoute
   '/corporate-gifts': typeof CorporateGiftsRoute
   '/delivery': typeof DeliveryRoute
   '/fashion-accessories': typeof FashionAccessoriesRoute
@@ -173,6 +181,7 @@ export interface FileRoutesById {
   '/anniversaries': typeof AnniversariesRoute
   '/birthdays': typeof BirthdaysRoute
   '/by-recipient': typeof ByRecipientRoute
+  '/contact': typeof ContactRoute
   '/corporate-gifts': typeof CorporateGiftsRoute
   '/delivery': typeof DeliveryRoute
   '/fashion-accessories': typeof FashionAccessoriesRoute
@@ -196,6 +205,7 @@ export interface FileRouteTypes {
     | '/anniversaries'
     | '/birthdays'
     | '/by-recipient'
+    | '/contact'
     | '/corporate-gifts'
     | '/delivery'
     | '/fashion-accessories'
@@ -217,6 +227,7 @@ export interface FileRouteTypes {
     | '/anniversaries'
     | '/birthdays'
     | '/by-recipient'
+    | '/contact'
     | '/corporate-gifts'
     | '/delivery'
     | '/fashion-accessories'
@@ -238,6 +249,7 @@ export interface FileRouteTypes {
     | '/anniversaries'
     | '/birthdays'
     | '/by-recipient'
+    | '/contact'
     | '/corporate-gifts'
     | '/delivery'
     | '/fashion-accessories'
@@ -260,6 +272,7 @@ export interface RootRouteChildren {
   AnniversariesRoute: typeof AnniversariesRoute
   BirthdaysRoute: typeof BirthdaysRoute
   ByRecipientRoute: typeof ByRecipientRoute
+  ContactRoute: typeof ContactRoute
   CorporateGiftsRoute: typeof CorporateGiftsRoute
   DeliveryRoute: typeof DeliveryRoute
   FashionAccessoriesRoute: typeof FashionAccessoriesRoute
@@ -384,6 +397,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CorporateGiftsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/by-recipient': {
       id: '/by-recipient'
       path: '/by-recipient'
@@ -420,6 +440,7 @@ const rootRouteChildren: RootRouteChildren = {
   AnniversariesRoute: AnniversariesRoute,
   BirthdaysRoute: BirthdaysRoute,
   ByRecipientRoute: ByRecipientRoute,
+  ContactRoute: ContactRoute,
   CorporateGiftsRoute: CorporateGiftsRoute,
   DeliveryRoute: DeliveryRoute,
   FashionAccessoriesRoute: FashionAccessoriesRoute,
