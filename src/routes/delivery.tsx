@@ -285,38 +285,8 @@ function DeliveryPage() {
           </div>
         </section>
 
-        {/* Important notes */}
+        {/* Closing CTA */}
         <section className="max-w-[1400px] mx-auto px-6 pb-20 md:pb-28">
-          <div className="rounded-3xl border border-ink/10 bg-ink text-cream p-8 md:p-12 grid lg:grid-cols-12 gap-10">
-            <div className="lg:col-span-4">
-              <span className="text-[11px] tracking-[0.22em] uppercase text-primary font-semibold">
-                Please note
-              </span>
-              <h2 className="mt-2 font-display text-3xl md:text-4xl font-semibold tracking-tight leading-tight">
-                Important delivery notes
-              </h2>
-            </div>
-            <div className="lg:col-span-8 grid sm:grid-cols-2 gap-5">
-              <div className="rounded-xl bg-cream/5 border border-cream/10 p-5">
-                <AlertCircle className="size-5 text-primary" />
-                <h4 className="mt-3 font-display text-lg font-semibold">Estimates, not guarantees</h4>
-                <p className="mt-2 text-sm text-cream/75 leading-relaxed">
-                  Times are a guide and may be affected by busy seasons, bank holidays, Royal
-                  Mail delays, adverse weather or circumstances outside our control.
-                </p>
-              </div>
-              <div className="rounded-xl bg-cream/5 border border-cream/10 p-5">
-                <MapPin className="size-5 text-primary" />
-                <h4 className="mt-3 font-display text-lg font-semibold">Remote postcodes</h4>
-                <p className="mt-2 text-sm text-cream/75 leading-relaxed">
-                  Some areas may take longer — including parts of the Scottish Highlands,
-                  Scottish Islands, Northern Ireland, Channel Islands, Isle of Man and Isles of
-                  Scilly.
-                </p>
-              </div>
-            </div>
-          </div>
-
           <div className="mt-10 flex flex-wrap items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
               Questions about a specific order? We're always on hand to chat with you if in doubt — our studio team is happy to help.
