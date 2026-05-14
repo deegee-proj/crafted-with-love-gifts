@@ -287,7 +287,7 @@ function DeliveryPage() {
 
         {/* Closing CTA */}
         <section className="max-w-[1400px] mx-auto px-6 pb-20 md:pb-28">
-          <div className="mt-10 flex flex-wrap items-center justify-between gap-4">
+          <div className="flex flex-wrap items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
               Questions about a specific order? We're always on hand to chat with you if in doubt — our studio team is happy to help.
             </p>
