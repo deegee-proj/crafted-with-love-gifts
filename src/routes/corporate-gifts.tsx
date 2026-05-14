@@ -33,10 +33,11 @@ import {
   ChevronDown,
   GraduationCap,
   HeartPulse,
-  HandHeart,
   Landmark,
-  Scale,
   Building2,
+  Cpu,
+  Clapperboard,
+  Banknote,
 } from "lucide-react";
 import corpHero from "@/assets/corp-hero.jpg";
 import corpGlassware from "@/assets/corp-glassware.jpg";
@@ -277,12 +278,12 @@ function CorporatePage() {
             </p>
             <ul className="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
               {[
-                { icon: GraduationCap, label: "Universities & Colleges" },
-                { icon: HeartPulse, label: "NHS Trusts" },
-                { icon: HandHeart, label: "Charities & Foundations" },
-                { icon: Landmark, label: "Local Councils" },
-                { icon: Scale, label: "Law Firms" },
-                { icon: Building2, label: "Housing Associations" },
+              { icon: Cpu, label: "Tech & SaaS" },
+                { icon: Landmark, label: "Government & Public Sector" },
+                { icon: HeartPulse, label: "NHS & Healthcare" },
+                { icon: Clapperboard, label: "Media & Entertainment" },
+                { icon: Banknote, label: "Finance & Professional Services" },
+                { icon: GraduationCap, label: "Education & Universities" },
               ].map((s) => (
                 <li
                   key={s.label}
