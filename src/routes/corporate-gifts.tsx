@@ -557,9 +557,11 @@ function CorporatePage() {
 
 function Stat({ n, label }: { n: string; label: string }) {
   return (
-    <div className="rounded-2xl bg-background/70 border border-ink/10 p-4 text-center">
-      <div className="font-display text-3xl md:text-4xl font-semibold text-primary">{n}</div>
-      <div className="mt-1 text-[11px] tracking-[0.18em] uppercase text-foreground/65">
+    <div className="rounded-2xl bg-background/70 border border-ink/10 p-3 text-center">
+      <div className="font-display text-xl md:text-2xl font-semibold text-primary leading-tight tracking-tight tabular-nums whitespace-nowrap">
+        {n}
+      </div>
+      <div className="mt-1 text-[10px] tracking-[0.16em] uppercase text-foreground/65">
         {label}
       </div>
     </div>
