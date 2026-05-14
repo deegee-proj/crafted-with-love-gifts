@@ -13,9 +13,15 @@ const COLS = [
   },
   {
     title: "Help",
-    links: ["Delivery & Returns", "Track Order", "Personalisation Guide", "Contact Us", "FAQs"],
+    links: [
+      { label: "Delivery Information", href: "/delivery" },
+      { label: "Track Order", href: "#" },
+      { label: "Personalisation Guide", href: "#" },
+      { label: "Contact Us", href: "#" },
+      { label: "FAQs", href: "#" },
+    ],
   },
-];
+] as const;
 
 export function Footer() {
   return (
@@ -41,9 +47,15 @@ export function Footer() {
             <div key={c.title}>
               <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-cream/60 mb-5">{c.title}</h4>
               <ul className="space-y-3 text-sm">
-                {c.links.map((l) => (
-                  <li key={l}><a href="#" className="text-cream/85 hover:text-primary transition-colors">{l}</a></li>
-                ))}
+                {c.links.map((l) => {
+                  const label = typeof l === "string" ? l : l.label;
+                  const href = typeof l === "string" ? "#" : l.href;
+                  return (
+                    <li key={label}>
+                      <a href={href} className="text-cream/85 hover:text-primary transition-colors">{label}</a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}
