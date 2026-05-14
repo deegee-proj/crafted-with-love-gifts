@@ -319,7 +319,7 @@ function DeliveryPage() {
 
           <div className="mt-10 flex flex-wrap items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              Questions about a specific order? Our studio team is happy to help.
+              Questions about a specific order? We're always on hand to chat with you if in doubt — our studio team is happy to help.
             </p>
             <Link
               to="/"
