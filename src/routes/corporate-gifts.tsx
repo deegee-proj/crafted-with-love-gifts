@@ -259,7 +259,7 @@ function CorporatePage() {
               <div className="md:hidden mt-5 grid grid-cols-2 gap-3">
                 <Stat n="25+" label="Minimum order" />
                 <Stat n="Express" label="Turnaround available" />
-                <Stat n="500+" label="Happy customers" />
+                <Stat n="1000+" label="Happy customers" />
                 <Stat n="UK" label="Made & dispatched" />
               </div>
             </div>
