@@ -108,11 +108,6 @@ const SERVICES = [
     body: "Pens, mugs, bottles, totes, keyrings and giveaways branded with your logo — perfect for events, conferences and onboarding packs.",
   },
   {
-    icon: CalendarClock,
-    title: "Dedicated production slots",
-    body: "Book a slot for conferences, awards nights or Christmas — guaranteed completion dates with sign-off proofs.",
-  },
-  {
     icon: ShieldCheck,
     title: "Dedicated Account Manager",
     body: "From quote to delivery, you'll have one dedicated contact managing your order.",
