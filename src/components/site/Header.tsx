@@ -18,6 +18,7 @@ const NAV = [
   { label: "Food & Drinks", to: "/food-drinks" },
   { label: "Fashion & Accs.", to: "/fashion-accessories" },
   { label: "Memorial Gifts", to: "/memorial-gifts" },
+  { label: "FAQs", to: "/faq" },
 ] as const;
 
 const TOP_NAV = [
