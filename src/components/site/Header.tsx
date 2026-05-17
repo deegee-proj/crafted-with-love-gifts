@@ -32,6 +32,7 @@ const TOP_NAV = [
   { label: "Anniversaries", to: "/anniversaries" },
   { label: "Occasions", to: "/occasions" },
   { label: "By Recipient", to: "/by-recipient" },
+  { label: "FAQs", to: "/faq" },
 ] as const;
 
 
