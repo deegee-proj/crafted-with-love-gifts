@@ -6,7 +6,7 @@ const COLS = [
       { label: "Returns & Refunds", href: "/returns" },
       { label: "Track Order", href: "#" },
       { label: "Contact Us", href: "/contact" },
-      { label: "FAQs", href: "#" },
+      { label: "FAQs", href: "/faq" },
     ],
   },
 ] as const;

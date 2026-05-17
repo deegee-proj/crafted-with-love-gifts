@@ -24,6 +24,7 @@ import { Route as HomeGardenRouteImport } from './routes/home-garden'
 import { Route as FoodDrinksRouteImport } from './routes/food-drinks'
 import { Route as FathersDayRouteImport } from './routes/fathers-day'
 import { Route as FashionAccessoriesRouteImport } from './routes/fashion-accessories'
+import { Route as FaqRouteImport } from './routes/faq'
 import { Route as DeliveryRouteImport } from './routes/delivery'
 import { Route as CorporateGiftsRouteImport } from './routes/corporate-gifts'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -107,6 +108,11 @@ const FashionAccessoriesRoute = FashionAccessoriesRouteImport.update({
   path: '/fashion-accessories',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DeliveryRoute = DeliveryRouteImport.update({
   id: '/delivery',
   path: '/delivery',
@@ -151,6 +157,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/corporate-gifts': typeof CorporateGiftsRoute
   '/delivery': typeof DeliveryRoute
+  '/faq': typeof FaqRoute
   '/fashion-accessories': typeof FashionAccessoriesRoute
   '/fathers-day': typeof FathersDayRoute
   '/food-drinks': typeof FoodDrinksRoute
@@ -175,6 +182,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/corporate-gifts': typeof CorporateGiftsRoute
   '/delivery': typeof DeliveryRoute
+  '/faq': typeof FaqRoute
   '/fashion-accessories': typeof FashionAccessoriesRoute
   '/fathers-day': typeof FathersDayRoute
   '/food-drinks': typeof FoodDrinksRoute
@@ -200,6 +208,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/corporate-gifts': typeof CorporateGiftsRoute
   '/delivery': typeof DeliveryRoute
+  '/faq': typeof FaqRoute
   '/fashion-accessories': typeof FashionAccessoriesRoute
   '/fathers-day': typeof FathersDayRoute
   '/food-drinks': typeof FoodDrinksRoute
@@ -226,6 +235,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/corporate-gifts'
     | '/delivery'
+    | '/faq'
     | '/fashion-accessories'
     | '/fathers-day'
     | '/food-drinks'
@@ -250,6 +260,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/corporate-gifts'
     | '/delivery'
+    | '/faq'
     | '/fashion-accessories'
     | '/fathers-day'
     | '/food-drinks'
@@ -274,6 +285,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/corporate-gifts'
     | '/delivery'
+    | '/faq'
     | '/fashion-accessories'
     | '/fathers-day'
     | '/food-drinks'
@@ -299,6 +311,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   CorporateGiftsRoute: typeof CorporateGiftsRoute
   DeliveryRoute: typeof DeliveryRoute
+  FaqRoute: typeof FaqRoute
   FashionAccessoriesRoute: typeof FashionAccessoriesRoute
   FathersDayRoute: typeof FathersDayRoute
   FoodDrinksRoute: typeof FoodDrinksRoute
@@ -423,6 +436,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FashionAccessoriesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/delivery': {
       id: '/delivery'
       path: '/delivery'
@@ -483,6 +503,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   CorporateGiftsRoute: CorporateGiftsRoute,
   DeliveryRoute: DeliveryRoute,
+  FaqRoute: FaqRoute,
   FashionAccessoriesRoute: FashionAccessoriesRoute,
   FathersDayRoute: FathersDayRoute,
   FoodDrinksRoute: FoodDrinksRoute,
@@ -502,3 +523,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
