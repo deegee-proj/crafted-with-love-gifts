@@ -10,12 +10,11 @@ export function Hero() {
             <Sparkles className="size-3.5" /> Hand-finished in the UK since 2021
           </div>
           <h1 className="mt-6 font-display text-5xl md:text-6xl lg:text-7xl leading-[0.95] font-semibold tracking-tight">
-            Gifts they'll <em className="text-primary not-italic">never</em><br />
-            forget receiving.
+            Made by Us. <em className="text-primary not-italic">Marked</em> by You.
           </h1>
           <p className="mt-6 text-lg text-foreground/70 max-w-[52ch] leading-relaxed">
-            Engraved glassware, custom mugs, photo frames and keepsakes — personalised in
-            our Birmingham studio with a live preview before you check out.
+            From our UK studios, we turn your words, photos and logos into thoughtful
+            personalised gifts for the people, milestones and moments that matter.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-3">
