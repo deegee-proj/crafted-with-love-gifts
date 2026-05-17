@@ -125,7 +125,6 @@ function Home() {
         <HowItWorks />
         <Testimonials />
         <About />
-        <FAQ />
         <Newsletter />
       </main>
       <Footer />
