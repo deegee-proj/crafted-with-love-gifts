@@ -1,21 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CategoryPage } from "@/components/site/CategoryPage";
 
+const TITLE = "Personalised Pet Gifts — Engraved Tags, Photo Gifts & Pet Memorials — Maker·Mark";
+const DESCRIPTION = "Personalised pet gifts engraved in our UK studio — pet tags, photo gifts, bespoke portraits and memorial keepsakes for cats, dogs and all the rest.";
+
 export const Route = createFileRoute("/pets")({
   head: () => ({
     meta: [
-      { title: "Personalised Pet Gifts & Gifts for Pet Lovers — Maker·Mark" },
-      {
-        name: "description",
-        content:
-          "Engraved bowls, photo mugs, portraits and keepsakes for the animals (and humans) who run the household.",
-      },
-      { property: "og:title", content: "Pets & Pet Lovers — Maker·Mark" },
-      {
-        property: "og:description",
-        content: "Personalised gifts for dogs, cats and the people who love them.",
-      },
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:url", content: "/pets" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "/pets" }],
   }),
   component: PetsPage,
 });
@@ -23,25 +22,11 @@ export const Route = createFileRoute("/pets")({
 function PetsPage() {
   return (
     <CategoryPage
-      eyebrow="For furry, feathered and four-legged"
-      title="Pets & Pet Lovers"
-      intro="They sit at the table. They steal the bed. They get a stocking at Christmas. Pets are family — and our pet collection treats them that way, with engraved keepsakes for them and the humans who adore them."
-      highlights={["Pet-safe materials", "Photo portraits", "Memorial keepsakes"]}
-      subcategories={[
-        { label: "Personalised Dog Bowls", blurb: "Ceramic and stainless, name engraved." },
-        { label: "Pet ID Tags", blurb: "Tough, etched, easy to read." },
-        { label: "Pet Photo Portraits", blurb: "Hand-styled illustrated prints." },
-        { label: "Dog Beds & Blankets", blurb: "Embroidered with their name." },
-        { label: "Pet Collars & Leads", blurb: "Engraved buckles, soft webbing." },
-        { label: "Pet Memorial Gifts", blurb: "For the ones who left paw prints." },
-        { label: "Cat Lover Gifts", blurb: "Mugs, prints and homewares." },
-        { label: "Dog Lover Gifts", blurb: "For the proud dog parent." },
-        { label: "Horse & Equestrian Gifts", blurb: "Engraved keepsakes for riders." },
-        { label: "Pet Photo Mugs", blurb: "Their face on every brew." },
-        { label: "Pet Christmas Stockings", blurb: "Yes, they get one too." },
-        { label: "New Puppy & Kitten Gifts", blurb: "Welcome to the family." },
-      ]}
-      closing="Looking for a memorial keepsake? Our studio offers a private hand-drawn portrait service — get in touch."
+      eyebrow="For the four-legged family"
+      title="Personalised Pet Gifts"
+      intro={["Pets are family — and our personalised pet gifts treat them that way. From engraved pet tags and named bowls to custom pet portraits, photo gifts and memorial keepsakes, every piece is made to order in our UK studio with the love your favourite animal deserves.","Personalise with your pet's name, photo, date of birth, breed or a heartfelt message. Whether you're shopping for a new puppy, a long-loved cat, a horse, a rabbit or a remembrance gift for a pet who has passed, our personalised pet gift range will help you mark the moment."]}
+      productCount={12}
+      seoSections={[{"heading":"Engraved pet tags and accessories","body":["An engraved pet tag is one of the most important personalised items you can buy — it could be what brings your pet home if they ever get lost. Our pet tags are hand-engraved on quality stainless steel, aluminium or brass with your pet's name, your phone number and any other details you'd like included.","Beyond tags, we offer named pet bowls, engraved leads, personalised collars and bespoke pet treat tins — practical pieces with a personal touch that make a thoughtful gift for any pet owner."]},{"heading":"Pet photo gifts and custom portraits","body":["If your pet's photos already fill your camera roll, our photo gifts put them somewhere you can actually enjoy them. Custom pet portraits, photo mugs, framed prints and canvases use high-resolution printing to bring even the loveliest pet pictures to life.","Custom pet portraits make particularly meaningful birthday and Christmas gifts for animal-loving friends, and our printed canvases and framed prints sit beautifully alongside family photos on a gallery wall."]},{"heading":"Pet memorial keepsakes","body":["Saying goodbye to a beloved pet is one of the hardest moments a family can go through. Our personalised pet memorial keepsakes — engraved garden plaques, paw-print frames and remembrance prints — offer a quietly beautiful way to honour them.","Every memorial piece is hand-finished in our UK studio with the care and sensitivity it deserves, and arrives in considered packaging with a handwritten-style card."]}]}
     />
   );
 }

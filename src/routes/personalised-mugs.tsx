@@ -1,21 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CategoryPage } from "@/components/site/CategoryPage";
 
+const TITLE = "Personalised Mugs UK — Custom Photo & Engraved Mugs — Maker·Mark";
+const DESCRIPTION = "Personalised mugs printed and engraved in our UK studio — add a photo, a name or a message. Ceramic, enamel and travel mugs with fast UK delivery.";
+
 export const Route = createFileRoute("/personalised-mugs")({
   head: () => ({
     meta: [
-      { title: "Personalised Mugs — Maker·Mark" },
-      {
-        name: "description",
-        content:
-          "Photo mugs, magic mugs and message mugs — printed and dispatched from our UK studio with care.",
-      },
-      { property: "og:title", content: "Personalised Mugs — Maker·Mark" },
-      {
-        property: "og:description",
-        content: "From morning brews to magic heat-change reveals — find a mug worth keeping.",
-      },
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:url", content: "/personalised-mugs" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "/personalised-mugs" }],
   }),
   component: PersonalisedMugsPage,
 });
@@ -23,25 +22,11 @@ export const Route = createFileRoute("/personalised-mugs")({
 function PersonalisedMugsPage() {
   return (
     <CategoryPage
-      eyebrow="Tea, coffee and reasons to smile"
+      eyebrow="The morning brew, made personal"
       title="Personalised Mugs"
-      intro="A mug isn't a small gift. It's the first thing they pick up in the morning and the thing they reach for when the day gets long. Make sure it has a face, a name or a joke they love."
-      highlights={["Dishwasher safe", "Ceramic & enamel", "Photo upload preview"]}
-      subcategories={[
-        { label: "Photo Upload Mugs", blurb: "Your snap, fired into ceramic." },
-        { label: "Magic Heat-Change Mugs", blurb: "The reveal happens at first sip." },
-        { label: "Name & Initial Mugs", blurb: "Simple, classic, theirs." },
-        { label: "Funny & Quote Mugs", blurb: "For the office and the inside joke." },
-        { label: "Couples & Pair Mug Sets", blurb: "Two mugs, one story." },
-        { label: "Family Mugs", blurb: "Mum, Dad, Granny, Granddad." },
-        { label: "Kids & Children's Mugs", blurb: "Plastic-safe drinkware." },
-        { label: "Travel & Insulated Mugs", blurb: "Commute-ready engraving." },
-        { label: "Enamel Camping Mugs", blurb: "For the outdoorsy ones." },
-        { label: "Birthday Mugs", blurb: "Newspaper headline editions." },
-        { label: "Christmas Mugs", blurb: "Festive, ready to wrap." },
-        { label: "Pet Photo Mugs", blurb: "Their best friend, on a mug." },
-      ]}
-      closing="All Maker·Mark mugs are printed and quality-checked in the UK before they leave the studio."
+      intro={["There is a reason personalised mugs are one of the most loved gifts of all time — they get used every single day. Our personalised mug collection turns the morning brew into a moment of joy with custom photo prints, hand-engraved names and bespoke messages on premium ceramic, enamel and travel mugs.","Every mug is printed or engraved in our UK studio using high-resolution images, deep colours and dishwasher-resistant finishes. Add a favourite family photo, a meaningful date, a private nickname or a quote that means something — small touches that make even the simplest gift feel completely theirs."]}
+      productCount={12}
+      seoSections={[{"heading":"Photo mugs that make people smile","body":["Photo mugs are the gift that lands every time. A picture of the kids, the dog, the wedding day or a favourite shared memory printed onto a ceramic mug turns a morning coffee into a daily reminder of someone important. Upload any high-resolution photo at checkout and our live preview tool shows exactly how the finished mug will look.","Printed using fade-resistant inks and finished to be dishwasher-safe, our photo mugs are designed to look as good after a hundred washes as they do on day one."]},{"heading":"Engraved and named ceramic mugs","body":["Prefer something a little more understated? Our engraved and printed name mugs let you add a name, initials or a short message to a range of beautiful ceramic shapes — from classic mugs and tankards to enamel campsite cups and stainless travel mugs.","Choose from a range of typefaces, layouts and finishes to match the recipient's taste, and pair with a personalised hamper for a complete gift."]},{"heading":"Perfect for every occasion","body":["Personalised mugs make brilliant gifts for birthdays, Father's Day, Mother's Day, Christmas, secret Santa, leaving gifts, teacher thank-yous and milestone celebrations. They are also one of our most popular corporate gift options — branded with a logo and packaged with a handwritten note for client thank-yous and team onboarding.","All mugs are made to order in our UK studio and dispatched with fast standard or express UK delivery."]}]}
     />
   );
 }

@@ -1,21 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CategoryPage } from "@/components/site/CategoryPage";
 
+const TITLE = "Personalised Gifts for Every Occasion — Birthdays, Weddings, Anniversaries — Maker·Mark";
+const DESCRIPTION = "Personalised gifts for every occasion — weddings, birthdays, anniversaries, Father's Day, Mother's Day, christenings and more. Hand-engraved in the UK.";
+
 export const Route = createFileRoute("/occasions")({
   head: () => ({
     meta: [
-      { title: "Shop by Occasion — Personalised Gifts — Maker·Mark" },
-      {
-        name: "description",
-        content:
-          "Browse engraved and personalised gifts by occasion — birthdays, weddings, christenings, retirements and beyond.",
-      },
-      { property: "og:title", content: "Shop by Occasion — Maker·Mark" },
-      {
-        property: "og:description",
-        content: "Every life moment deserves a keepsake. Find the right one here.",
-      },
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:url", content: "/occasions" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "/occasions" }],
   }),
   component: OccasionsPage,
 });
@@ -24,26 +23,10 @@ function OccasionsPage() {
   return (
     <CategoryPage
       eyebrow="Every moment, marked"
-      title="Shop by Occasion"
-      intro="Some occasions repeat every year. Some happen exactly once. Either way, the right gift turns the date into a memory — and we've sorted the studio by occasion to help you find it."
-      highlights={["Curated by moment", "Studio gift guide", "Express delivery"]}
-      subcategories={[
-        { label: "Birthdays", blurb: "Milestone and everyday." },
-        { label: "Weddings", blurb: "Couples, party and guests." },
-        { label: "Anniversaries", blurb: "Every traditional material." },
-        { label: "Engagements", blurb: "Mark the yes." },
-        { label: "New Baby & Christenings", blurb: "First keepsakes." },
-        { label: "Mother's Day", blurb: "For every kind of mum." },
-        { label: "Father's Day", blurb: "Hand-finished keepsakes." },
-        { label: "Christmas", blurb: "Engraved and ready to wrap." },
-        { label: "Valentine's Day", blurb: "Keepsakes that outlast the flowers." },
-        { label: "Graduation", blurb: "Cap-and-gown worthy gifts." },
-        { label: "Retirement", blurb: "End-of-career recognition." },
-        { label: "Memorial & Sympathy", blurb: "Keepsakes for remembering." },
-        { label: "Housewarming", blurb: "For the new front door." },
-        { label: "Thank You Gifts", blurb: "Said properly." },
-      ]}
-      closing="Can't find the occasion you're shopping for? Use the search bar at the top of every page."
+      title="Personalised Gifts for Every Occasion"
+      intro={["Whatever you're celebrating, we have a personalised gift for it. Our occasions collection covers every milestone moment — weddings, birthdays, anniversaries, christenings, retirements, graduations, Father's Day, Mother's Day, Valentine's Day, Christmas and everything in between — with hand-engraved keepsakes made to order in our UK studio.","Each piece can be personalised with names, dates, photos or a message of your choice, so the gift carries the meaning of the moment long after the event itself. Browse by occasion below to find the perfect personalised present for your celebration."]}
+      productCount={12}
+      seoSections={[{"heading":"Personalised gifts for life's big moments","body":["The most memorable gifts are the ones tied to a specific moment in someone's life. Whether it is a 21st birthday, a silver wedding anniversary, a christening or a hard-won retirement, our occasions collection makes it easy to find a personalised keepsake that captures the day and turns it into something the recipient can hold on to forever.","Engraved glassware, photo frames, jewellery boxes, prints, decanters and bespoke leather goods are just the start. Every piece is made by hand in our UK studio, with no minimum order and most items dispatched within 1-2 working days."]},{"heading":"Seasonal occasions and yearly celebrations","body":["Some occasions come around every year — Father's Day, Mother's Day, Valentine's Day, Christmas — and a personalised gift is what stops them feeling repetitive. Our seasonal occasion ranges are refreshed each year with new engraving styles, designs and limited-edition pieces, so even regular gift-givers have something fresh to choose from.","Plan ahead with our gift reminder list, or use our express delivery options for last-minute orders right up to the day before."]},{"heading":"Made in the UK, ready to give","body":["Every Maker·Mark occasion gift is engraved, printed or hand-finished in our UK studio. We use premium materials — crystal, full-grain leather, solid timber, ceramic and hallmarked metals — and check every order by hand before it leaves us.","All occasion gifts arrive gift-wrapped in tissue paper with a handwritten-style message card, ready to give straight from the box."]}]}
     />
   );
 }
