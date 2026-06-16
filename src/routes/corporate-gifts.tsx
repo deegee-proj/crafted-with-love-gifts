@@ -38,8 +38,8 @@ const seoSections = [
   {
     heading: "From single bespoke pieces to bulk corporate orders",
     body: [
-      "There is no minimum order. We work with start-ups ordering a one-off engraved gift for a departing director, agencies producing 50 client thank-yous and enterprise teams shipping 5,000+ branded items for a national rollout. Tiered pricing kicks in as quantities grow and quotes are always itemised, so you can see exactly what you are paying for.",
-      "Need split-dispatch to home addresses for a remote team? Staged drops across multiple offices? Branded outer packaging with a personalised message card inside? Tell us how the gift needs to land and we will build the logistics around it.",
+      "There is no minimum order. We work with start-ups ordering a one-off engraved gift for a departing director, agencies producing 50 client thank-yous and enterprise teams shipping 5,000+ branded items for a national rollout. Volume discounts apply as your order size increases and every quote breaks down the costs line by line, so there are no hidden fees.",
+      "Whether you need individual shipments sent straight to remote team members, staggered deliveries across several office locations, or custom outer packaging with a handwritten message card tucked inside, just let us know how the gifts should arrive and we will handle the rest.",
     ],
   },
   {
