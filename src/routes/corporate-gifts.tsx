@@ -57,20 +57,6 @@ const seoSections = [
   },
 ];
 
-const previousClients = [
-  "Northwind Studios",
-  "Halcyon & Co.",
-  "Meridian Group",
-  "Brightline Agency",
-  "Atlas Ventures",
-  "Kestrel Partners",
-  "Oakhouse Hotels",
-  "Lumen Tech",
-  "Fairgrove Estates",
-  "Beacon & Bell",
-  "Saltaire Wines",
-  "Ironclad Legal",
-];
 
 function CorporateGiftsPage() {
   return (
