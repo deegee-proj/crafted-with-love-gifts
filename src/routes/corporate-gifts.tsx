@@ -9,8 +9,8 @@ import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { useState } from "react";
 
-const TITLE = "Personalised Corporate & Branded Business Gifts UK — Maker·Mark";
-const DESCRIPTION = "Premium branded and personalised corporate gifts, hand-finished in the UK. Logo engraving on glassware, decanters, awards, mugs and hampers — from single bespoke pieces to bulk orders.";
+const TITLE = "Personalised Corporate & Branded Business Gifts UK - Maker·Mark";
+const DESCRIPTION = "Premium branded and personalised corporate gifts, hand-finished in the UK. Logo engraving on glassware, decanters, awards, mugs and hampers - from single bespoke pieces to bulk orders.";
 
 export const Route = createFileRoute("/corporate-gifts")({
   head: () => ({
@@ -45,18 +45,17 @@ const seoSections = [
   {
     heading: "Dedicated account management from brief to delivery",
     body: [
-      "Every corporate enquiry is handled by a dedicated account manager from initial brief through to delivery. One point of contact, same-day quotes on most enquiries and clear timelines you can plan around — so you spend less time chasing updates and more time on the campaign itself.",
+      "Every corporate enquiry is handled by a dedicated account manager from initial brief through to delivery. One point of contact, same-day quotes on most enquiries and clear timelines you can plan around - so you spend less time chasing updates and more time on the campaign itself.",
     ],
   },
   {
     heading: "Trusted for client gifts, employee rewards and events",
     body: [
       "UK businesses use Maker·Mark for client gifting, new-business pitches, employee onboarding packs, long-service awards, sales incentives, retirement gifts, conference giveaways, speaker thank-yous, influencer drops and end-of-year Christmas hampers. Whether the brief is a quiet executive piece or a high-energy branded campaign, we help you choose products that suit the audience, the occasion and the budget.",
-      "Ready to start? Request a quote with your quantity, deadline and budget per unit and our corporate desk will come back with product options, mock-ups and tiered pricing — usually the same working day.",
+      "Ready to start? Request a quote with your quantity, deadline and budget per unit and our corporate desk will come back with product options, mock-ups and tiered pricing - usually the same working day.",
     ],
   },
 ];
-
 
 function CorporateGiftsPage() {
   return (
@@ -82,8 +81,8 @@ function CorporateGiftsPage() {
               Personalised Corporate Gifts
             </h1>
             <div className="mt-6 space-y-4 text-base md:text-lg text-foreground/75 leading-relaxed max-w-3xl">
-              <p>Premium branded and personalised corporate gifts designed to leave a lasting impression. From client gifting to large-scale campaigns, Maker·Mark helps businesses deliver thoughtful, high-quality branded gifts without the usual hassle — with full in-house production and an experienced UK team behind every order, we maintain complete control over quality, consistency and turnaround.</p>
-              <p>Whether you need a small run of executive thank-yous or a large-volume order for a conference, onboarding pack or end-of-year campaign, we make the process simple, reliable and right on time. Explore a selection of popular corporate gifts below, or request a quote for any product across our full range — everything on our website can be tailored for your business with logo engraving, branded packaging and bespoke presentation.</p>
+              <p>Premium branded and personalised corporate gifts designed to leave a lasting impression. From client gifting to large-scale campaigns, Maker·Mark helps businesses deliver thoughtful, high-quality branded gifts without the usual hassle - with full in-house production and an experienced UK team behind every order, we maintain complete control over quality, consistency and turnaround.</p>
+              <p>Whether you need a small run of executive thank-yous or a large-volume order for a conference, onboarding pack or end-of-year campaign, we make the process simple, reliable and right on time. Explore a selection of popular corporate gifts below, or request a quote for any product across our full range - everything on our website can be tailored for your business with logo engraving, branded packaging and bespoke presentation.</p>
             </div>
           </div>
         </section>
@@ -121,35 +120,6 @@ function CorporateGiftsPage() {
           </div>
         </section>
 
-        {/* Previous clients */}
-        <section className="border-t border-ink/5 bg-muted/30">
-          <div className="max-w-[1100px] mx-auto px-6 py-14 md:py-20">
-            <div className="max-w-3xl">
-              <span className="inline-flex items-center gap-2 text-[11px] tracking-[0.22em] uppercase text-primary font-semibold">
-                <BadgeCheck className="size-3.5" /> Previous Clients
-              </span>
-              <h2 className="mt-4 font-display text-2xl md:text-3xl font-semibold tracking-tight">
-                Trusted by UK brands, agencies and growing teams
-              </h2>
-              <p className="mt-4 text-foreground/75 leading-relaxed">
-                A small selection of the businesses we've produced branded and personalised gifts for — from one-off executive pieces to nationwide rollouts.
-              </p>
-            </div>
-
-            <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-              {previousClients.map((name) => (
-                <div
-                  key={name}
-                  className="flex items-center gap-3 rounded-xl border border-ink/10 bg-card px-4 py-4"
-                >
-                  <Building2 className="size-4 text-primary/70 shrink-0" />
-                  <span className="text-sm font-medium tracking-tight truncate">{name}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Request a quote */}
         <section id="quote" className="border-t border-ink/5">
           <div className="max-w-[1100px] mx-auto px-6 py-14 md:py-20 grid md:grid-cols-5 gap-10">
@@ -161,13 +131,13 @@ function CorporateGiftsPage() {
                 Tell us about your project
               </h2>
               <p className="mt-4 text-foreground/75 leading-relaxed">
-                Share a few details and our corporate desk will come back — usually the same working day — with product suggestions, mock-ups and tiered pricing.
+                Share a few details and our corporate desk will come back - usually the same working day - with product suggestions, mock-ups and tiered pricing.
               </p>
               <ul className="mt-6 space-y-2 text-sm text-foreground/75">
-                <li>• Same-day quotes on most enquiries</li>
-                <li>• No minimum order quantity</li>
-                <li>• Digital proof before anything is engraved</li>
-                <li>• UK-based studio and account manager</li>
+                <li>Same-day quotes on most enquiries</li>
+                <li>No minimum order quantity</li>
+                <li>Digital proof before anything is engraved</li>
+                <li>UK-based studio and account manager</li>
               </ul>
             </div>
 
@@ -207,7 +177,7 @@ function QuoteForm() {
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSubmitting(true);
-    // Placeholder — wire to backend later
+    // Placeholder - wire to backend later
     setTimeout(() => {
       setSubmitting(false);
       (e.target as HTMLFormElement).reset();
@@ -261,7 +231,7 @@ function QuoteForm() {
 
       <div className="space-y-2">
         <Label htmlFor="budget">Budget per unit (optional)</Label>
-        <Input id="budget" name="budget" placeholder="e.g. £15–£25" maxLength={60} />
+        <Input id="budget" name="budget" placeholder="e.g. £15-£25" maxLength={60} />
       </div>
 
       <div className="space-y-2">
