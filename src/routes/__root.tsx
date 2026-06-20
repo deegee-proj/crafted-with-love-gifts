@@ -72,11 +72,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Maker·Mark — Personalised Gifts" },
+      { title: "Lovable App" },
       { name: "description", content: "Premium personalised gifts hand-finished in the UK." },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Maker·Mark" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Lovable App" },
+      { name: "twitter:title", content: "Lovable App" },
+      { property: "og:description", content: "Premium personalised gifts hand-finished in the UK." },
+      { name: "twitter:description", content: "Premium personalised gifts hand-finished in the UK." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2828a3bb-c97e-411e-b841-b38397469837/id-preview-791cf0b4--1c7ee7f8-2120-440b-98e9-3b128cb2a833.lovable.app-1781616366164.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2828a3bb-c97e-411e-b841-b38397469837/id-preview-791cf0b4--1c7ee7f8-2120-440b-98e9-3b128cb2a833.lovable.app-1781616366164.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
